@@ -205,7 +205,6 @@ button {
 }
 
 .tn-tabs a {
-  position: relative;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -239,27 +238,6 @@ button {
 
 .tn-tabs a.active b {
   opacity: 1;
-}
-
-.tn-tabs a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -1px;
-  height: 2px;
-  background: var(--amber);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.3s cubic-bezier(0.65, 0, 0.35, 1);
-}
-
-.tn-tabs a:hover::after {
-  transform: scaleX(0.4);
-}
-
-.tn-tabs a.active::after {
-  transform: scaleX(1);
 }
 
 .tn-status {
@@ -1722,30 +1700,19 @@ section {
   color: var(--ink-dim);
 }
 
-.edu-notes {
-  margin-top: 22px;
-  list-style: none;
-  border-top: 1px solid var(--line);
-}
-
-.edu-notes li {
-  position: relative;
-  padding: 12px 0 12px 26px;
-  border-bottom: 1px solid var(--line);
-  font-size: 14.5px;
-}
-
-.edu-notes li::before {
-  content: "✓";
-  position: absolute;
-  left: 0;
+.edu-honors {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 7px 14px 6px 12px;
+  border-left: 3px solid var(--amber);
+  background: rgba(255, 176, 32, 0.07);
   font-family: var(--mono);
-  color: #4ade80;
-}
-
-.edu-notes li b {
-  color: var(--amber);
+  font-size: 13px;
   font-weight: 600;
+  letter-spacing: 0.3em;
+  text-transform: lowercase;
+  color: var(--amber);
+  text-shadow: 0 0 22px rgba(255, 176, 32, 0.4);
 }
 
 .stamps {

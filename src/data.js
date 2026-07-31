@@ -235,10 +235,7 @@ export const EDUCATION = {
   degree: "BS INFORMATION TECHNOLOGY",
   spec: "SPECIALIZATION IN WEB & MOBILE APPLICATIONS",
   period: "2018 — 2022",
-  notes: [
-    "Graduated SUMMA CUM LAUDE",
-    "Competed in multiple programming competitions",
-  ],
+  honors: "summa cum laude",
   organizations: [
     { role: "INTERNAL VICE PRESIDENT", org: "JUNIOR PHILIPPINE COMPUTER SOCIETY — JPCS", span: "2018 — 2020" },
     { role: "CREATIVES MEMBER", org: "TERTIARY HONOR SOCIETY", span: "2019 — 2020" },

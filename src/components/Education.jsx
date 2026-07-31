@@ -28,19 +28,7 @@ export default function Education() {
             <p className="edu-meta">
               {EDUCATION.place} · {EDUCATION.period}
             </p>
-            <ul className="edu-notes">
-              {EDUCATION.notes.map((n, i) => (
-                <li key={i}>
-                  {i === 0 ? (
-                    <>
-                      Graduated <b>SUMMA CUM LAUDE</b>
-                    </>
-                  ) : (
-                    n
-                  )}
-                </li>
-              ))}
-            </ul>
+            <p className="edu-honors">{EDUCATION.honors}</p>
 
             <div className="edu-orgs">
               <span className="edu-orgs-label">ORGANIZATION RECORD</span>
