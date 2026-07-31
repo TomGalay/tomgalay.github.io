@@ -180,11 +180,3 @@ export const AWARDS = [
   },
 ];
 
-export const REVISIONS = [
-  { rev: "REV.A", date: "2021 — 2022", note: "FIRST ISSUE — FREELANCE WORDPRESS" },
-  { rev: "REV.B", date: "2022", note: "INTERNSHIP — QADRA STUDIO / JLCG" },
-  { rev: "REV.C", date: "2023", note: "LEAD DEVELOPER — SYMPOSIUM SYSTEM" },
-  { rev: "REV.D", date: "2023", note: "MLM + E-COMMERCE SYSTEM" },
-  { rev: "REV.E", date: "2023 — 2025", note: "MYCAREHUB — NDIS BUSINESS SYSTEMS" },
-  { rev: "REV.F", date: "2025 — NOW", note: "MOBILE — GPS SHIFT TRACKING" },
-];

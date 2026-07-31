@@ -61,7 +61,10 @@ export default function Experience() {
                   aria-expanded={open === i}
                 >
                   <span className="tl-rev">{j.rev}</span>
-                  <span className="tl-acc-role">{j.role}</span>
+                  <span className="tl-acc-titles">
+                    <span className="tl-acc-role">{j.role}</span>
+                    <span className="tl-acc-co">{j.company}</span>
+                  </span>
                   <span className="tl-span">{j.span}</span>
                   <span className="tl-acc-ind" aria-hidden="true">
                     {open === i ? "−" : "+"}
@@ -78,7 +81,7 @@ export default function Experience() {
                     >
                       <div className="tl-acc-inner">
                         <p className="tl-acc-meta">
-                          {j.company} · {j.period} · {j.place}
+                          {j.period} · {j.place}
                         </p>
                         <JobBody job={j} />
                       </div>
@@ -111,6 +114,7 @@ export default function Experience() {
                     <span className="tl-dot" aria-hidden="true" />
                     <span className="tl-rev">{j.rev}</span>
                     <span className="tl-role">{j.role}</span>
+                    <span className="tl-company">{j.company}</span>
                     <span className="tl-span">{j.span}</span>
                   </button>
                 </li>

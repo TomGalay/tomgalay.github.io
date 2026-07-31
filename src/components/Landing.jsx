@@ -11,6 +11,16 @@ const fade = {
   }),
 };
 
+const nameBlock = {
+  hidden: {},
+  show: { transition: { staggerChildren: 0.1, delayChildren: 0.12 } },
+};
+
+const nameLine = {
+  hidden: { opacity: 0, y: 38 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.75, ease: [0.22, 1, 0.36, 1] } },
+};
+
 export default function Landing() {
   return (
     <header className="landing" id="title">
@@ -19,22 +29,29 @@ export default function Landing() {
           <motion.p className="landing-eyebrow" variants={fade} initial="hidden" animate="show" custom={0}>
             PORTFOLIO / RÉSUMÉ — {PROFILE.docNo}
           </motion.p>
-          <motion.h1 className="landing-name" variants={fade} initial="hidden" animate="show" custom={1}>
-            {PROFILE.name[0]} <span className="alt">{PROFILE.name[1]}</span> {PROFILE.name[2]}
+          <motion.h1 className="landing-name" variants={nameBlock} initial="hidden" animate="show">
+            {PROFILE.name.map((part, i) => (
+              <motion.span
+                key={part}
+                className={`ln${i === 1 ? " alt" : i === 2 ? " accent" : ""}`}
+                variants={nameLine}
+              >
+                {part}
+              </motion.span>
+            ))}
           </motion.h1>
-          <motion.p className="landing-statement" variants={fade} initial="hidden" animate="show" custom={2}>
-            I BUILD THE
-            <br />
-            <em>SYSTEMS</em> THAT
-            <br />
-            RUN THE SHIFT.
+          <motion.p className="landing-role" variants={fade} initial="hidden" animate="show" custom={3}>
+            {PROFILE.role} <span>{PROFILE.disciplines}</span>
           </motion.p>
-          <motion.p className="landing-sub" variants={fade} initial="hidden" animate="show" custom={3}>
+          <motion.p className="landing-statement" variants={fade} initial="hidden" animate="show" custom={4}>
+            I BUILD THE <em>SYSTEMS</em> THAT RUN THE SHIFT.
+          </motion.p>
+          <motion.p className="landing-sub" variants={fade} initial="hidden" animate="show" custom={5}>
             Full-stack developer behind an Australian NDIS provider's operating software —{" "}
             <b>intake pipelines, scheduling engines, payments and mobile shift tracking</b> — designed,
             shipped and maintained on AWS.
           </motion.p>
-          <motion.div className="landing-cta" variants={fade} initial="hidden" animate="show" custom={4}>
+          <motion.div className="landing-cta" variants={fade} initial="hidden" animate="show" custom={6}>
             <a className="btn btn-solid" href="#experience">
               INSPECT THE WORK ↓
             </a>
