@@ -1,5 +1,5 @@
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
-import { STACK_LAYERS, STACK_CALLOUTS } from "../data.js";
+import { STACK_LAYERS } from "../data.js";
 
 export default function SystemStack() {
   const mx = useMotionValue(0);
@@ -32,15 +32,6 @@ export default function SystemStack() {
       role="img"
       aria-label="Isometric blueprint model of the system layers Isaiah builds: infrastructure, data, operations, scheduling and mobile"
     >
-      <div className="stack-callouts" aria-hidden="true">
-        {STACK_CALLOUTS.map((c) => (
-          <span className={`callout ${c.id}`} key={c.id}>
-            <i />
-            {c.text}
-          </span>
-        ))}
-      </div>
-
       <div className="stack-scene">
         <motion.div className="stack-tilt" style={{ rotateX: tiltX, rotateZ: tiltZ }}>
           <div className="stack-stage">

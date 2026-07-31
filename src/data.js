@@ -148,12 +148,6 @@ export const STACK_LAYERS = [
   { id: "L5", name: "Mobile Edge", parts: ["GPS TRACKING", "PUSH ALERTS"] },
 ];
 
-export const STACK_CALLOUTS = [
-  { id: "c1", text: "GPS PING — 14.3583°N 121.1140°E" },
-  { id: "c2", text: "SHIFT REPORT → AUTO PDF" },
-  { id: "c3", text: "EC2 PROD + DEV INSTANCES" },
-];
-
 export const EDUCATION = {
   school: "FEU ALABANG",
   place: "MUNTINLUPA",

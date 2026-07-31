@@ -770,70 +770,6 @@ section {
   background: radial-gradient(closest-side, rgba(111, 211, 255, 0.3), transparent 72%);
 }
 
-.stack-callouts {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  font-family: var(--mono);
-  font-size: 10px;
-  letter-spacing: 0.1em;
-  color: var(--cyan);
-}
-
-.callout {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  gap: 9px;
-  animation: callout-float 6s ease-in-out infinite alternate;
-}
-
-.callout i {
-  position: relative;
-  display: block;
-  width: 46px;
-  height: 1px;
-  background: rgba(111, 211, 255, 0.5);
-}
-
-.callout i::before {
-  content: "";
-  position: absolute;
-  left: -3px;
-  top: -3px;
-  width: 5px;
-  height: 5px;
-  border: 1px solid var(--cyan);
-  border-radius: 50%;
-}
-
-.callout.c1 {
-  top: 5%;
-  right: -6%;
-}
-
-.callout.c2 {
-  top: 46%;
-  left: -11%;
-  flex-direction: row-reverse;
-  animation-delay: -2s;
-}
-
-.callout.c3 {
-  bottom: 9%;
-  right: -3%;
-  animation-delay: -4s;
-}
-
-@keyframes callout-float {
-  from {
-    transform: translateY(-5px);
-  }
-  to {
-    transform: translateY(6px);
-  }
-}
-
 .stack-caption {
   margin-top: 34px;
   font-family: var(--mono);
@@ -1593,7 +1529,7 @@ section {
 
 .contact-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   margin-top: 56px;
   border: 1px solid var(--line-strong);
 }
@@ -1686,8 +1622,13 @@ section {
   }
 
   .stack {
-    min-height: 480px;
-    margin-top: 24px;
+    min-height: 0;
+    margin-top: 8px;
+    padding-top: 112px;
+  }
+
+  .stack-stage {
+    transform: rotateX(58deg) rotateZ(-45deg) scale3d(0.8, 0.8, 0.8);
   }
 
   .tl {
@@ -1733,12 +1674,8 @@ section {
     padding-top: 48px;
   }
 
-  .callout {
-    display: none;
-  }
-
-  .stack {
-    min-height: 420px;
+  .stack-stage {
+    transform: rotateX(58deg) rotateZ(-45deg) scale3d(0.66, 0.66, 0.66);
   }
 
   .tb-strip > div {
@@ -1777,8 +1714,7 @@ section {
   .ticker-track,
   .led,
   .stack-layer,
-  .stack-beacon::after,
-  .callout {
+  .stack-beacon::after {
     animation: none;
   }
 

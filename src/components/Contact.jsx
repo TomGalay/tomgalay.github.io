@@ -47,12 +47,6 @@ export default function Contact() {
             <span className="contact-key">LINKEDIN</span>
             <span className="contact-val">isaiah-thomas-galay ↗</span>
           </a>
-          <div className="contact-cell" data-index="C-03">
-            <span className="contact-key">BASE OF OPERATIONS</span>
-            <span className="contact-val">
-              {PROFILE.location} · {PROFILE.coords}
-            </span>
-          </div>
         </motion.div>
       </div>
     </section>
