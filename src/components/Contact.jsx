@@ -6,10 +6,10 @@ export default function Contact() {
   return (
     <section id="contact">
       <span className="sheet-no" aria-hidden="true">
-        04
+        05
       </span>
       <div className="wrap">
-        <SheetHeader no="04" title="Contact" note="TRANSMIT SPECS — RESPONSE WITHIN 24H" />
+        <SheetHeader no="05" title="Contact" note="TRANSMIT SPECS — RESPONSE WITHIN 24H" />
 
         <motion.p
           className="contact-eyebrow"

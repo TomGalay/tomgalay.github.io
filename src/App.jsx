@@ -4,6 +4,7 @@ import Landing from "./components/Landing.jsx";
 import Ticker from "./components/Ticker.jsx";
 import Experience from "./components/Experience.jsx";
 import Skills from "./components/Skills.jsx";
+import Projects from "./components/Projects.jsx";
 import Education from "./components/Education.jsx";
 import Contact from "./components/Contact.jsx";
 import Footer from "./components/Footer.jsx";
@@ -21,6 +22,7 @@ export default function App() {
         <Ticker />
         <Experience />
         <Skills />
+        <Projects />
         <Education />
         <Contact />
         <Footer />

@@ -114,31 +114,37 @@ export const SKILL_GROUPS = [
     id: "G-01",
     name: "Languages",
     note: "CORE BUILD MATERIALS",
-    items: ["JavaScript", "PHP", "HTML", "CSS"],
+    items: ["JavaScript", "PHP", "Kotlin", "HTML", "CSS", "Sass"],
   },
   {
     id: "G-02",
     name: "Frameworks & Libraries",
     note: "STRUCTURAL TOOLING",
-    items: ["Vue.js", "Bootstrap"],
+    items: ["Vue.js", "Laravel", "Tailwind", "Bootstrap", "jQuery"],
   },
   {
     id: "G-03",
-    name: "Platforms & Integration",
-    note: "WHERE SYSTEMS LIVE",
-    items: ["WordPress", "REST APIs"],
+    name: "Mobile",
+    note: "HANDHELD SYSTEMS",
+    items: ["Flutter", "Android (Kotlin)"],
   },
   {
     id: "G-04",
+    name: "Platforms & Integration",
+    note: "WHERE SYSTEMS LIVE",
+    items: ["WordPress", "Node.js", "REST APIs"],
+  },
+  {
+    id: "G-05",
     name: "Data & Storage",
     note: "RECORDS & STATE",
     items: ["MySQL", "Firebase"],
   },
   {
-    id: "G-05",
+    id: "G-06",
     name: "Cloud & DevOps",
     note: "INFRASTRUCTURE & DELIVERY",
-    items: ["AWS", "GCP", "Azure"],
+    items: ["AWS", "GCP", "Azure", "Google Workspace"],
   },
 ];
 
@@ -150,6 +156,79 @@ export const STACK_LAYERS = [
   { id: "L5", name: "Mobile Edge", parts: ["GPS TRACKING", "PUSH ALERTS"] },
 ];
 
+export const PROJECTS = {
+  featured: [
+    {
+      id: "PRJ-01",
+      name: "CryptSim",
+      image: "/projects/CryptSim.webp",
+      alt: "CryptSim trading simulator screens",
+      blurb:
+        "Advanced cryptocurrency trading simulator for mobile. Capstone project — won Best Research at Eureka 2022.",
+      points: [
+        "Built login/registration and profiles in Kotlin; contributed to the trading, transaction and backtesting modules",
+        "Managed the MySQL database on Azure; wrote Node.js APIs on Microsoft serverless functions linking the cloud, mobile app and admin site",
+      ],
+      tags: ["ANDROID", "KOTLIN", "NODE.JS", "AZURE", "MYSQL"],
+      links: [{ label: "DEMO", href: "https://www.youtube.com/watch?v=FqipOo7wO6k" }],
+    },
+    {
+      id: "PRJ-02",
+      name: "Chronicles of Elijah",
+      image: "/projects/Chronicles.webp",
+      alt: "Chronicles of Elijah RPG game screens",
+      blurb:
+        "Turn-based RPG with three levels, random monster encounters and a boss per level — built on personal time.",
+      points: [
+        "Classes control user and enemy entities with levels and attributes; functions drive mechanics, animations and audio",
+        "XP gain, XP requirements and gold scaling follow a custom formula",
+      ],
+      tags: ["HTML", "CSS", "JS", "JQUERY"],
+      links: [{ label: "CODE", href: "https://github.com/TomGalay/Chronicles-of-Elijah" }],
+    },
+    {
+      id: "PRJ-03",
+      name: "Vapour.",
+      image: "/projects/Vapour.webp",
+      alt: "Vapour game distribution platform screens",
+      blurb:
+        "Video game digital distribution platform built for a Web Development subject.",
+      points: [
+        "Frontend: market, library and purchase modules",
+        "Backend: login/registration, purchase and add-to-library flow, error validations",
+      ],
+      tags: ["HTML", "CSS", "PHP", "MYSQL"],
+      links: [{ label: "CODE", href: "https://github.com/TomGalay/Vapour" }],
+    },
+  ],
+  other: [
+    {
+      id: "PRJ-04",
+      name: "Portfolio V1",
+      desc: "First portfolio site — hand-rolled animations and scroll reveals.",
+      tags: ["HTML", "CSS", "JS"],
+      links: [
+        { label: "CODE", href: "https://github.com/TomGalay/TomGalay.github.io" },
+        { label: "VIEW", href: "https://isaiahgalay.github.io/" },
+      ],
+    },
+    {
+      id: "PRJ-05",
+      name: "Laragigs",
+      desc: "Job listing platform with auth, CRUD listings and category filters.",
+      tags: ["LARAVEL", "PHP"],
+      links: [{ label: "CODE", href: "https://github.com/TomGalay/Laragigs" }],
+    },
+    {
+      id: "PRJ-06",
+      name: "WordPress Demo",
+      desc: "Custom plugin and themes — registration with profiles and an admin dashboard.",
+      tags: ["WORDPRESS", "PHP"],
+      links: [{ label: "CODE", href: "https://github.com/TomGalay/wordpress-demo" }],
+    },
+  ],
+};
+
 export const EDUCATION = {
   school: "FEU ALABANG",
   place: "MUNTINLUPA",
@@ -158,21 +237,67 @@ export const EDUCATION = {
   period: "2018 — 2022",
   notes: [
     "Graduated SUMMA CUM LAUDE",
-    "Internal Vice President, Junior Philippine Computer Society (JPCS)",
     "Competed in multiple programming competitions",
+  ],
+  organizations: [
+    { role: "INTERNAL VICE PRESIDENT", org: "JUNIOR PHILIPPINE COMPUTER SOCIETY — JPCS", span: "2018 — 2020" },
+    { role: "CREATIVES MEMBER", org: "TERTIARY HONOR SOCIETY", span: "2019 — 2020" },
+    { role: "MEMBER", org: "ASSOCIATION OF COMPUTING MACHINERY", span: "2018 — 2020" },
+    { role: "MEMBER", org: "GOOGLE DEVELOPERS STUDENT CLUB", span: "2019 — 2020" },
   ],
 };
 
 export const AWARDS = [
   {
+    title: "SUMMA CUM LAUDE",
+    issuer: "FEU ALABANG",
+    year: "2023",
+    link: "https://www.facebook.com/FEUAlabang/photos/a.1304249696289861/5460492983998824/",
+  },
+  {
     title: "MOST OUTSTANDING ITE STUDENT",
-    issuer: "PHILIPPINE SOCIETY OF INFORMATION TECHNOLOGY EDUCATORS — PSITE",
+    issuer: "PHILIPPINE SOCIETY OF INFORMATION TECHNOLOGY EDUCATORS — PSITE NCR",
     year: "2022",
+    link: "https://www.facebook.com/FEUAlabang/posts/tamaraw-spotlight-congratulations-to-our-bsit-wma-student-isaiah-thomas-a-galay-/5346110262103764/",
+  },
+  {
+    title: "BEST RESEARCH — EUREKA 2022",
+    issuer: "FEU ALABANG · CRYPTSIM CAPSTONE",
+    year: "2022",
+    link: "https://www.facebook.com/Eureka2022/posts/pfbid0xSqN8hugqB3RwYx3PWAYtMVaTbBYFPnV9aTfc4MueuizXSYBC4BoTWX6fzdZ4eqnl",
   },
   {
     title: "ACADEMIC EXCELLENCE AWARD",
     issuer: "JUNIOR PHILIPPINE COMPUTER SOCIETY — JPCS",
     year: "2022",
+    link: "https://www.facebook.com/FEUAlabang/photos/a.1304249696289861/5460492983998824/",
+  },
+];
+
+export const COMPETITIONS = [
+  {
+    title: "MICROSOFT AZURE FUNDAMENTALS CHALLENGE",
+    event: "MICROSOFT CLOUD SKILLS CHALLENGE · 2021",
+    result: "CHAMPION",
+    link: "https://www.facebook.com/FEUAlabang/posts/pfbid038M4S1smQvnA2BqsG5w5dAv4KQJPpQfymBivm8qLk244Qfn48wGYjzwZnY2kZFF6pl",
+  },
+  {
+    title: "IDEATHON COMPETITION",
+    event: "UP CURSOR COMPUTER SCIENCE SUMMIT · 2021",
+    result: "CHAMPION",
+    link: "https://www.facebook.com/JPCSFEUA/posts/pfbid02TbBuBbhN8o1hwFcHVpz2Rqo1UXPeEQ3vLKQuTapMFrg9oD6s5CEVtmmX8Hhheoiyl",
+  },
+  {
+    title: "JAVA PROGRAMMING COMPETITION",
+    event: "10TH IT SKILLS OLYMPICS · 2021",
+    result: "CHAMPION",
+    link: "https://www.facebook.com/FEUAlabang/photos/4514163658631766/",
+  },
+  {
+    title: "YOUNG SOFTWARE ENGINEERING CODING COMPETITION",
+    event: "UP LOS BAÑOS · 2021",
+    result: "CHAMPION",
+    link: "https://feualabang.edu.ph/features/feu-alabang-continues-to-charge-further-emerges-as-new-champions-in-local-coding-competition",
   },
 ];
 
