@@ -21,6 +21,7 @@ export const EXPERIENCE = [
     span: "2025 — NOW",
     place: "REMOTE",
     current: true,
+    link: "MYCAREHUB",
     summary:
       "Multiplatform mobile app for support workers — schedules, booking acceptance and shift reports, with admin management of NDIS bookings and report review on mobile.",
     points: [
@@ -34,9 +35,10 @@ export const EXPERIENCE = [
     role: "WordPress Developer",
     company: "Mycarehub",
     period: "NOV 2023 — PRESENT",
-    span: "2023 — 25",
+    span: "2023 — NOW",
     place: "REMOTE",
     current: true,
+    link: "MYCAREHUB",
     summary:
       "Core business systems for an Australian NDIS service provider — intake, operations, scheduling, automations and infrastructure.",
     points: [

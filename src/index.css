@@ -957,6 +957,31 @@ section {
   opacity: 0.75;
 }
 
+.tl-item.linked .tl-rev {
+  color: var(--amber);
+}
+
+.tl-item.linked .tl-role {
+  color: var(--cyan);
+}
+
+.tl-item.linked .tl-company {
+  color: var(--cyan);
+  opacity: 1;
+}
+
+.tl-item.linked .tl-dot {
+  background: var(--amber);
+  border-color: var(--amber);
+  box-shadow: 0 0 14px rgba(255, 176, 32, 0.75);
+  transform: rotate(45deg) scale(1.2);
+}
+
+.tl-fill.pair {
+  background: var(--amber);
+  box-shadow: 0 0 10px rgba(255, 176, 32, 0.6);
+}
+
 .tl-detail {
   position: sticky;
   top: 92px;
@@ -964,12 +989,54 @@ section {
 
 .tl-card {
   position: relative;
-  padding: 38px 40px 0;
+  padding: 34px 38px 28px;
   border: 1px solid var(--line-strong);
   outline: 1px solid var(--line);
   outline-offset: 5px;
   background: rgba(9, 30, 64, 0.5);
   overflow: hidden;
+  transition: opacity 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.tl-card.secondary {
+  border-style: dashed;
+  opacity: 0.72;
+}
+
+.tl-card--mini {
+  padding: 26px 30px 22px;
+}
+
+.tl-card--mini .tl-ghost {
+  top: -26px;
+  font-size: 112px;
+}
+
+.tl-card--mini .tl-card-top h3 {
+  font-size: clamp(24px, 2.6vw, 32px);
+}
+
+.tl-pair-link {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 12px 0;
+}
+
+.tl-pair-link::before,
+.tl-pair-link::after {
+  content: "";
+  flex: 1;
+  border-top: 1px dashed rgba(255, 176, 32, 0.5);
+}
+
+.tl-pair-link span {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  color: var(--amber);
+  white-space: nowrap;
 }
 
 .tl-ghost {
@@ -1086,9 +1153,10 @@ section {
   display: flex;
   align-items: center;
   gap: 14px;
-  margin-top: 28px;
-  padding: 16px 0;
-  border-top: 1px dashed var(--line-strong);
+  margin-top: 14px;
+  padding: 14px 18px;
+  border: 1px solid var(--line-strong);
+  background: rgba(9, 30, 64, 0.5);
 }
 
 .tl-btn {
@@ -1183,6 +1251,15 @@ section {
   font-size: 9.5px;
   letter-spacing: 0.14em;
   color: var(--cyan);
+  text-transform: uppercase;
+}
+
+.tl-acc-link {
+  margin-top: 10px;
+  font-family: var(--mono);
+  font-size: 9.5px;
+  letter-spacing: 0.14em;
+  color: var(--amber);
   text-transform: uppercase;
 }
 
