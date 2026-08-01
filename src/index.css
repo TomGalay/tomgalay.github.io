@@ -2106,7 +2106,7 @@ a.stamp {
   display: flex;
   flex-wrap: wrap;
   gap: 14px 34px;
-  justify-content: space-between;
+  justify-content: center;
   font-family: var(--mono);
   font-size: 10.5px;
   letter-spacing: 0.14em;

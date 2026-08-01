@@ -15,7 +15,7 @@ export default function Skills() {
         02
       </span>
       <div className="wrap">
-        <SheetHeader no="02" title="Skills" note="BILL OF MATERIALS — GROUPED BY FUNCTION, NO FILLER" />
+        <SheetHeader no="02" title="Skills" note="TECH STACK — WEB · MOBILE" />
 
         <div className="skill-groups">
           {SKILL_GROUPS.map((group, i) => (

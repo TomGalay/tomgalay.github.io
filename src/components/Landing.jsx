@@ -27,7 +27,7 @@ export default function Landing() {
       <div className="wrap landing-grid">
         <div className="landing-copy">
           <motion.p className="landing-eyebrow" variants={fade} initial="hidden" animate="show" custom={0}>
-            PORTFOLIO / RÉSUMÉ — {PROFILE.docNo}
+            PORTFOLIO
           </motion.p>
           <motion.h1 className="landing-name" variants={nameBlock} initial="hidden" animate="show">
             {PROFILE.name.map((part, i) => (

@@ -60,7 +60,7 @@ export default function SystemStack() {
         </motion.div>
       </div>
 
-      <p className="stack-caption">FIG. 01 — SYSTEM UNDER LOAD · MOVE CURSOR TO INSPECT · HOVER A PLATE TO LIFT IT</p>
+      <p className="stack-caption">FIG. 01 — MOVE CURSOR TO INSPECT · HOVER A PLATE TO LIFT IT</p>
     </div>
   );
 }
