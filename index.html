@@ -8,6 +8,14 @@
       content="Isaiah Thomas Galay — Full-Stack Developer. Web, mobile and cloud systems. Spec sheet / résumé."
     />
     <title>Isaiah Thomas Galay — Full-Stack Developer · Spec Sheet</title>
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem("ig-theme");
+          if (t === "light" || t === "dark") document.documentElement.dataset.theme = t;
+        } catch (e) {}
+      })();
+    </script>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="theme-color" content="#0d2a55" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />

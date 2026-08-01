@@ -10,9 +10,29 @@ const SECTIONS = [
   { id: "contact", no: "05", label: "CONTACT" },
 ];
 
+const THEMES = ["light", "dark", "blue"];
+
+function storedTheme() {
+  try {
+    const t = localStorage.getItem("ig-theme");
+    return THEMES.includes(t) ? t : "blue";
+  } catch {
+    return "blue";
+  }
+}
+
 export default function TopNav() {
   const [active, setActive] = useState("title");
   const [progress, setProgress] = useState(0);
+  const [theme, setTheme] = useState(storedTheme);
+
+  const applyTheme = (id) => {
+    setTheme(id);
+    document.documentElement.dataset.theme = id;
+    try {
+      localStorage.setItem("ig-theme", id);
+    } catch {}
+  };
 
   useEffect(() => {
     let frame = null;
@@ -56,7 +76,20 @@ export default function TopNav() {
         ))}
       </div>
       <div className="tn-status">
-        <span className="led" /> SYSTEMS NOMINAL
+        <span className="led" aria-hidden="true" />
+        <div className="tn-theme" role="group" aria-label="Color mode">
+          {THEMES.map((id) => (
+            <button
+              key={id}
+              type="button"
+              className={theme === id ? "active" : ""}
+              aria-pressed={theme === id}
+              onClick={() => applyTheme(id)}
+            >
+              {id.toUpperCase()}
+            </button>
+          ))}
+        </div>
       </div>
       <motion.div
         className="tn-progress"
