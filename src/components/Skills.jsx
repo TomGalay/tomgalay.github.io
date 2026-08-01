@@ -1,11 +1,13 @@
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import SheetHeader from "./SheetHeader.jsx";
+import { SkillGlyph, GroupGlyph } from "./SkillIcons.jsx";
 import { SKILL_GROUPS } from "../data.js";
 
 const ease = [0.22, 1, 0.36, 1];
 
 export default function Skills() {
   let partNo = 0;
+  const reduce = useReducedMotion();
 
   return (
     <section id="skills">
@@ -27,6 +29,7 @@ export default function Skills() {
             >
               <div className="sg-head">
                 <span className="sg-id">{group.id}</span>
+                <GroupGlyph id={group.id} className="sg-glyph" />
                 <h3 className="sg-name">{group.name}</h3>
                 <span className="sg-note">{group.note}</span>
                 <span className="sg-count">
@@ -34,10 +37,19 @@ export default function Skills() {
                 </span>
               </div>
               <ul className="sg-tiles">
-                {group.items.map((item) => {
+                {group.items.map((item, j) => {
                   partNo += 1;
                   return (
                     <li key={item} className="sg-tile">
+                      <motion.span
+                        className="sg-tile-glyph"
+                        initial={reduce ? false : { opacity: 0, scale: 1.35 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        viewport={{ once: true, margin: "-60px" }}
+                        transition={{ duration: 0.5, delay: 0.15 + j * 0.06, ease }}
+                      >
+                        <SkillGlyph name={item} />
+                      </motion.span>
                       <span className="sg-tile-no">P-{String(partNo).padStart(2, "0")}</span>
                       <span className="sg-tile-name">{item}</span>
                     </li>

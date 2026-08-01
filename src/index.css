@@ -1402,6 +1402,39 @@ section {
   color: var(--cyan);
 }
 
+.sg-glyph {
+  width: 25px;
+  height: 25px;
+  flex: none;
+  align-self: center;
+  color: var(--ink-dim);
+}
+
+.sg-tile-glyph {
+  position: absolute;
+  top: 13px;
+  right: 13px;
+  width: 21px;
+  height: 21px;
+  color: var(--ink-dim);
+  transition: color 0.3s;
+}
+
+.sg-tile-glyph svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.sg-tile:hover .sg-tile-glyph {
+  color: var(--cyan);
+}
+
+.sg-tile:hover .sg-tile-glyph svg {
+  transform: translateY(-2px);
+}
+
 /* ---------- projects & showcases ---------- */
 
 .proj-grid {
