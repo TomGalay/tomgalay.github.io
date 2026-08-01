@@ -1052,19 +1052,6 @@ section {
   transform: rotate(45deg) scale(1.3);
 }
 
-.tl-rev {
-  display: block;
-  font-family: var(--mono);
-  font-size: 10px;
-  letter-spacing: 0.16em;
-  color: var(--ink-dim);
-  transition: color 0.3s;
-}
-
-.tl-item.active .tl-rev {
-  color: var(--amber);
-}
-
 .tl-role {
   display: block;
   margin-top: 4px;
@@ -1106,10 +1093,6 @@ section {
   letter-spacing: 0.1em;
   color: var(--ink-dim);
   opacity: 0.75;
-}
-
-.tl-item.linked .tl-rev {
-  color: var(--amber);
 }
 
 .tl-item.linked .tl-role {
@@ -1161,8 +1144,8 @@ section {
 }
 
 .tl-card--mini .tl-ghost {
-  top: -26px;
-  font-size: 112px;
+  top: -14px;
+  font-size: 64px;
 }
 
 .tl-card--mini .tl-card-top h3 {
@@ -1194,10 +1177,10 @@ section {
 
 .tl-ghost {
   position: absolute;
-  top: -40px;
-  right: -8px;
+  top: -18px;
+  right: 2px;
   font-family: var(--display);
-  font-size: 170px;
+  font-size: 88px;
   line-height: 1;
   color: transparent;
   -webkit-text-stroke: 1px var(--stroke-faint);
@@ -1380,10 +1363,6 @@ section {
   text-align: left;
   cursor: pointer;
   transition: background 0.25s;
-}
-
-.tl-acc-head .tl-rev {
-  color: var(--amber);
 }
 
 .tl-acc-titles {

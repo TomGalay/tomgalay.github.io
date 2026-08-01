@@ -68,7 +68,6 @@ export default function Experience() {
                   onClick={() => setOpen(open === i ? -1 : i)}
                   aria-expanded={open === i}
                 >
-                  <span className="tl-rev">{j.rev}</span>
                   <span className="tl-acc-titles">
                     <span className="tl-acc-role">{j.role}</span>
                     <span className="tl-acc-co">{j.company}</span>
@@ -95,7 +94,7 @@ export default function Experience() {
                           <p className="tl-acc-link">
                             ⟂ Concurrent with{" "}
                             {concurrentOf(j)
-                              .map((o) => `${o.rev} — ${o.role}`)
+                              .map((o) => o.role)
                               .join(" · ")}
                           </p>
                         )}
@@ -130,7 +129,6 @@ export default function Experience() {
                       aria-pressed={i === active}
                     >
                       <span className="tl-dot" aria-hidden="true" />
-                      <span className="tl-rev">{j.rev}</span>
                       <span className="tl-role">{j.role}</span>
                       <span className="tl-company">{j.company}</span>
                       <span className="tl-span">{j.span}</span>
@@ -154,7 +152,7 @@ export default function Experience() {
                     <Fragment key={j.rev}>
                       {k > 0 && (
                         <div className="tl-pair-link" aria-hidden="true">
-                          <span>CONCURRENT — SAME ENGAGEMENT</span>
+                          <span>ADDITIONAL ROLE</span>
                         </div>
                       )}
                       <article
@@ -165,7 +163,7 @@ export default function Experience() {
                       >
                         {j.rev === job.rev && (
                           <span className="tl-ghost" aria-hidden="true">
-                            {j.rev}
+                            {j.period.split(" — ")[0]}
                           </span>
                         )}
                         <div className="tl-card-top">
