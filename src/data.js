@@ -112,39 +112,33 @@ export const EXPERIENCE = [
 export const SKILL_GROUPS = [
   {
     id: "G-01",
-    name: "Languages",
+    name: "Languages & Markup",
     note: "CORE BUILD MATERIALS",
-    items: ["JavaScript", "PHP", "Kotlin", "HTML", "CSS", "Sass"],
+    items: ["HTML", "CSS", "JS", "PHP", "MJML"],
   },
   {
     id: "G-02",
-    name: "Frameworks & Libraries",
-    note: "STRUCTURAL TOOLING",
-    items: ["Vue.js", "Laravel", "Tailwind", "Bootstrap", "jQuery"],
+    name: "Backend & CMS",
+    note: "SERVER-SIDE SYSTEMS",
+    items: ["WordPress", "REST APIs", "SOAP"],
   },
   {
     id: "G-03",
-    name: "Mobile",
-    note: "HANDHELD SYSTEMS",
-    items: ["Flutter", "Android (Kotlin)"],
+    name: "Database",
+    note: "RECORDS & STATE",
+    items: ["MySQL"],
   },
   {
     id: "G-04",
-    name: "Platforms & Integration",
-    note: "WHERE SYSTEMS LIVE",
-    items: ["WordPress", "Node.js", "REST APIs"],
+    name: "Mobile Development",
+    note: "HANDHELD SYSTEMS",
+    items: ["Flutter", "iOS", "Android"],
   },
   {
     id: "G-05",
-    name: "Data & Storage",
-    note: "RECORDS & STATE",
-    items: ["MySQL", "Firebase"],
-  },
-  {
-    id: "G-06",
-    name: "Cloud & DevOps",
+    name: "Cloud & Services",
     note: "INFRASTRUCTURE & DELIVERY",
-    items: ["AWS", "GCP", "Azure", "Google Workspace"],
+    items: ["AWS", "GCP", "Google Apps"],
   },
 ];
 
