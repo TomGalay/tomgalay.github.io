@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { PROFILE } from "../data.js";
 
 const SECTIONS = [
   { id: "title", no: "00", label: "TITLE" },
@@ -47,8 +46,7 @@ export default function TopNav() {
   return (
     <nav className="topnav" aria-label="Sheet index">
       <a className="tn-brand" href="#title">
-        ITG<span>.</span>
-        <em>SPEC SHEET {PROFILE.rev}</em>
+        IG<span>.</span>
       </a>
       <div className="tn-tabs">
         {SECTIONS.map((s) => (

@@ -186,14 +186,6 @@ button {
   color: var(--amber);
 }
 
-.tn-brand em {
-  font-family: var(--mono);
-  font-style: normal;
-  font-size: 9.5px;
-  letter-spacing: 0.16em;
-  color: var(--ink-dim);
-}
-
 .tn-tabs {
   display: flex;
   overflow-x: auto;
@@ -2163,10 +2155,6 @@ a.stamp {
 
   .tl-spine,
   .tl-detail {
-    display: none;
-  }
-
-  .tn-brand em {
     display: none;
   }
 
