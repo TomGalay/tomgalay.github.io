@@ -1635,6 +1635,7 @@ section {
 }
 
 .show-body .proj-links {
+  margin-top: 0;
   padding-top: 24px;
 }
 
