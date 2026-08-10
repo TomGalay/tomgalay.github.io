@@ -52,11 +52,11 @@ export default function Landing() {
             shipped and maintained on AWS.
           </motion.p>
           <motion.div className="landing-cta" variants={fade} initial="hidden" animate="show" custom={6}>
-            <a className="btn btn-solid" href="#experience">
-              INSPECT THE WORK ↓
+            <a className="btn btn-solid" href="#work">
+              SEE MY WORKS ↓
             </a>
             <a className="btn btn-ghost" href={`mailto:${PROFILE.email}`}>
-              TRANSMIT A BRIEF →
+              SEND A MESSAGE →
             </a>
           </motion.div>
         </div>

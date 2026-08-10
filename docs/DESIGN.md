@@ -18,6 +18,8 @@ All tokens are CSS custom properties in `src/index.css` (`:root`). Never hardcod
 | `--amber` | `#ffb020` | Highlights, tabs, part IDs, CTAs |
 | `--stamp` | `#ff6b4a` | Stamps and seals only |
 
+`--cyan` and `--amber` are re-derived per theme: dark = dim blue `#4aa3d1` + green `#2ea97d`, light = teal `#0b7ca6` + the same yellow `#ffb020` (with `--on-accent` flipped to dark ink). The blue theme above is the default.
+
 Additional semantic colors used sparingly: `#4ade80` (status LEDs, "current" markers, checkmarks).
 
 ## Typography

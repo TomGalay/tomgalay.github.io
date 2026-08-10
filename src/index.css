@@ -58,8 +58,8 @@
   --ink-dim: #97a2b6;
   --line: rgba(208, 219, 237, 0.12);
   --line-strong: rgba(208, 219, 237, 0.32);
-  --cyan: #7cd6ff;
-  --amber: #ffb547;
+  --cyan: #4aa3d1;
+  --amber: #2ea97d;
   --stamp: #ff7a5e;
   --ok: var(--ok);
   --on-accent: #10131a;
@@ -73,32 +73,32 @@
   --grid-ghost: rgba(208, 219, 237, 0.05);
   --stroke-ghost: rgba(208, 219, 237, 0.07);
   --stroke-faint: rgba(208, 219, 237, 0.08);
-  --cyan-line: rgba(124, 214, 255, 0.5);
-  --cyan-line-soft: rgba(124, 214, 255, 0.32);
-  --cyan-line-strong: rgba(124, 214, 255, 0.6);
-  --cyan-wash: rgba(124, 214, 255, 0.05);
-  --cyan-wash-strong: rgba(124, 214, 255, 0.1);
-  --cyan-glow: rgba(124, 214, 255, 0.55);
-  --cyan-glow-strong: rgba(124, 214, 255, 0.8);
-  --amber-line: rgba(255, 181, 71, 0.5);
-  --amber-line-strong: rgba(255, 181, 71, 0.6);
-  --amber-wash: rgba(255, 181, 71, 0.07);
-  --amber-glow: rgba(255, 181, 71, 0.7);
-  --amber-glow-soft: rgba(255, 181, 71, 0.55);
-  --amber-glow-dim: rgba(255, 181, 71, 0.4);
+  --cyan-line: rgba(74, 163, 209, 0.5);
+  --cyan-line-soft: rgba(74, 163, 209, 0.32);
+  --cyan-line-strong: rgba(74, 163, 209, 0.6);
+  --cyan-wash: rgba(74, 163, 209, 0.05);
+  --cyan-wash-strong: rgba(74, 163, 209, 0.1);
+  --cyan-glow: rgba(74, 163, 209, 0.45);
+  --cyan-glow-strong: rgba(74, 163, 209, 0.7);
+  --amber-line: rgba(46, 169, 125, 0.5);
+  --amber-line-strong: rgba(46, 169, 125, 0.6);
+  --amber-wash: rgba(46, 169, 125, 0.09);
+  --amber-glow: rgba(46, 169, 125, 0.55);
+  --amber-glow-soft: rgba(46, 169, 125, 0.45);
+  --amber-glow-dim: rgba(46, 169, 125, 0.32);
   --stamp-wash: rgba(255, 122, 94, 0.05);
   --stamp-glow: rgba(255, 122, 94, 0.16);
   --stamp-glow-strong: rgba(255, 122, 94, 0.22);
-  --glow-a: rgba(124, 214, 255, 0.07);
-  --glow-b: rgba(255, 181, 71, 0.05);
-  --glow-c: rgba(124, 214, 255, 0.05);
+  --glow-a: rgba(74, 163, 209, 0.07);
+  --glow-b: rgba(46, 169, 125, 0.05);
+  --glow-c: rgba(74, 163, 209, 0.05);
   --vignette: rgba(0, 0, 0, 0.5);
   --shadow: rgba(0, 0, 0, 0.5);
   --shadow-strong: rgba(0, 0, 0, 0.62);
   --shadow-card: rgba(4, 6, 10, 0.9);
   --fig-top: rgba(18, 22, 31, 0.05);
   --fig-bottom: rgba(8, 10, 15, 0.55);
-  --ground: rgba(124, 214, 255, 0.2);
+  --ground: rgba(74, 163, 209, 0.16);
 }
 
 [data-theme="light"] {
@@ -109,10 +109,10 @@
   --line: rgba(20, 38, 66, 0.13);
   --line-strong: rgba(20, 38, 66, 0.34);
   --cyan: #0b7ca6;
-  --amber: #a35b00;
+  --amber: #ffb020;
   --stamp: #cf3f22;
   --ok: #16a34a;
-  --on-accent: #f8f4e9;
+  --on-accent: #14213a;
   --nav: rgba(240, 244, 249, 0.92);
   --surface: rgba(255, 255, 255, 0.55);
   --surface-soft: rgba(255, 255, 255, 0.35);
@@ -130,12 +130,12 @@
   --cyan-wash-strong: rgba(11, 124, 166, 0.1);
   --cyan-glow: rgba(11, 124, 166, 0.35);
   --cyan-glow-strong: rgba(11, 124, 166, 0.45);
-  --amber-line: rgba(163, 91, 0, 0.5);
-  --amber-line-strong: rgba(163, 91, 0, 0.6);
-  --amber-wash: rgba(163, 91, 0, 0.08);
-  --amber-glow: rgba(163, 91, 0, 0.4);
-  --amber-glow-soft: rgba(163, 91, 0, 0.35);
-  --amber-glow-dim: rgba(163, 91, 0, 0.3);
+  --amber-line: rgba(255, 176, 32, 0.55);
+  --amber-line-strong: rgba(255, 176, 32, 0.6);
+  --amber-wash: rgba(255, 176, 32, 0.22);
+  --amber-glow: rgba(255, 176, 32, 0.45);
+  --amber-glow-soft: rgba(255, 176, 32, 0.4);
+  --amber-glow-dim: rgba(255, 176, 32, 0.35);
   --stamp-wash: rgba(207, 63, 34, 0.05);
   --stamp-glow: rgba(207, 63, 34, 0.14);
   --stamp-glow-strong: rgba(207, 63, 34, 0.2);
@@ -149,6 +149,11 @@
   --fig-top: rgba(20, 38, 66, 0.04);
   --fig-bottom: rgba(20, 38, 66, 0.28);
   --ground: rgba(11, 124, 166, 0.18);
+}
+
+[data-theme="light"] .sl-id,
+[data-theme="light"] .sg-id {
+  color: #f8f4e9;
 }
 
 * {

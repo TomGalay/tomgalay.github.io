@@ -163,7 +163,7 @@ export default function Experience() {
                       >
                         {j.rev === job.rev && (
                           <span className="tl-ghost" aria-hidden="true">
-                            {j.period.split(" — ")[0]}
+                            {j.period.split(" – ")[0]}
                           </span>
                         )}
                         <div className="tl-card-top">
