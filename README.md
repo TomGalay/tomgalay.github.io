@@ -43,7 +43,6 @@ Navigation is a sticky **sheet-tab bar** (CAD-style) with scroll-spy and a readi
 │       ├── Landing.jsx     # Sheet 00 — statement + data strip
 │       ├── SystemStack.jsx # 3D isometric layer model (CSS 3D + pointer tilt)
 │       ├── Crosshair.jsx   # CAD cursor overlay
-│       ├── Ticker.jsx      # Skills marquee
 │       ├── SheetHeader.jsx # Shared sheet title + dimension line
 │       ├── Experience.jsx  # Sheet 01 — interactive timeline / mobile accordion
 │       ├── Skills.jsx      # Sheet 02 — grouped bill of materials
@@ -69,7 +68,7 @@ Design tokens (colors, fonts, lines) are the CSS custom properties at the top of
 
 ## Accessibility & performance notes
 
-- `prefers-reduced-motion` disables the grid drift, ticker, layer bob, beacon, and callout animations, and turns off smooth scrolling.
+- `prefers-reduced-motion` disables the grid drift, layer bob, beacon, and callout animations, and turns off smooth scrolling.
 - The crosshair is hidden on coarse pointers (`@media (pointer: coarse)`).
 - The experience timeline degrades to an accessible accordion (real `<button>`s, `aria-expanded`) below 880px.
 - The 3D model is CSS transforms only — no WebGL, keeps the bundle light (~91 kB JS gzipped).

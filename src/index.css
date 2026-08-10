@@ -929,49 +929,6 @@ section {
   text-align: center;
 }
 
-/* ---------- ticker ---------- */
-
-.ticker {
-  border-top: 1px solid var(--line-strong);
-  border-bottom: 1px solid var(--line-strong);
-  overflow: hidden;
-  padding: 14px 0;
-  background: var(--surface-soft);
-  transition: background-color 0.45s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.ticker-track {
-  display: flex;
-  width: max-content;
-  animation: ticker 30s linear infinite;
-}
-
-.ticker:hover .ticker-track {
-  animation-play-state: paused;
-}
-
-.ticker-track span {
-  font-family: var(--display);
-  font-size: 20px;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--ink-dim);
-  padding: 0 18px;
-  white-space: nowrap;
-}
-
-.ticker-track span b {
-  color: var(--amber);
-  font-weight: 400;
-  padding-right: 18px;
-}
-
-@keyframes ticker {
-  to {
-    transform: translateX(-50%);
-  }
-}
-
 /* ---------- experience timeline ---------- */
 
 .tl {
@@ -1428,7 +1385,7 @@ section {
   font-size: 11px;
   letter-spacing: 0.1em;
   color: var(--cyan);
-  text-transform: uppercase;
+  text-transform: none;
 }
 
 /* ---------- skills (bill of materials) ---------- */
@@ -2390,7 +2347,6 @@ a.stamp {
 
 @media (prefers-reduced-motion: reduce) {
   .bg-grid,
-  .ticker-track,
   .led,
   .stack-layer,
   .stack-beacon::after {

@@ -1,7 +1,6 @@
 import Crosshair from "./components/Crosshair.jsx";
 import TopNav from "./components/TopNav.jsx";
 import Landing from "./components/Landing.jsx";
-import Ticker from "./components/Ticker.jsx";
 import Experience from "./components/Experience.jsx";
 import Skills from "./components/Skills.jsx";
 import Projects from "./components/Projects.jsx";
@@ -19,7 +18,6 @@ export default function App() {
       <TopNav />
       <div className="page">
         <Landing />
-        <Ticker />
         <Experience />
         <Skills />
         <Projects />
