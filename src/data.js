@@ -151,70 +151,89 @@ export const PROJECTS = {
   featured: [
     {
       id: "PRJ-01",
+      layout: "web",
+      name: "WinLi Home",
+      client: "STRUCTURAL ENGINEERING · ALHAMBRA, CA",
+      url: "winlihome.com",
+      blurb:
+        "Developed and designed a website for a Structural Engineering Company in Alhambra, CA. Worked on the branding, design, and website.",
+      images: [
+        { src: "/projects/winli/winlihome-1.png", alt: "WinLi Home website — home page" },
+        { src: "/projects/winli/winlihome-2.png", alt: "WinLi Home website — services page" },
+        { src: "/projects/winli/winlihome-3.png", alt: "WinLi Home website — contact page" },
+      ],
+      links: [{ label: "VISIT SITE", href: "https://winlihome.com/" }],
+    },
+    {
+      id: "PRJ-02",
+      layout: "mobile",
+      name: "New Life Sta Rosa",
+      client: "FULL-STACK CHURCH APP · IOS · ANDROID · WEB CMS",
+      blurb:
+        "Worked in a team to create a full stack application for a local church. An iOS and Android mobile app was created featuring announcements, events, videos, and livestreaming for church members and guests supported with reminders, push notifications, and Firebase login. A CMS is provided to the administrators in the web.",
+      images: [
+        { src: "/projects/new-life-sta-rosa/newlife-1.png", alt: "New Life Sta Rosa app — splash screen" },
+        { src: "/projects/new-life-sta-rosa/newlife-2.png", alt: "New Life Sta Rosa app — home feed" },
+        { src: "/projects/new-life-sta-rosa/newlife-3.png", alt: "New Life Sta Rosa app — connect screen" },
+        { src: "/projects/new-life-sta-rosa/newlife-4.png", alt: "New Life Sta Rosa app — events screen" },
+        { src: "/projects/new-life-sta-rosa/newlife-5.png", alt: "New Life Sta Rosa app — media screen" },
+        { src: "/projects/new-life-sta-rosa/newlife-6.png", alt: "New Life Sta Rosa app — profile screen" },
+      ],
+      links: [
+        { label: "APP STORE", href: "https://apps.apple.com/ph/app/new-life-sta-rosa/id6787141995" },
+        { label: "PLAY STORE", href: "#" },
+      ],
+    },
+  ],
+  archive: [
+    {
+      id: "PRJ-03",
       name: "CryptSim",
       image: "/projects/CryptSim.webp",
       alt: "CryptSim trading simulator screens",
       blurb:
         "Advanced cryptocurrency trading simulator for mobile. Capstone project — won Best Research at Eureka 2022.",
-      points: [
-        "Built login/registration and profiles in Kotlin; contributed to the trading, transaction and backtesting modules",
-        "Managed the MySQL database on Azure; wrote Node.js APIs on Microsoft serverless functions linking the cloud, mobile app and admin site",
-      ],
-      tags: ["ANDROID", "KOTLIN", "NODE.JS", "AZURE", "MYSQL"],
       links: [{ label: "DEMO", href: "https://www.youtube.com/watch?v=FqipOo7wO6k" }],
     },
     {
-      id: "PRJ-02",
+      id: "PRJ-04",
       name: "Chronicles of Elijah",
       image: "/projects/Chronicles.webp",
       alt: "Chronicles of Elijah RPG game screens",
       blurb:
-        "Turn-based RPG with three levels, random monster encounters and a boss per level — built on personal time.",
-      points: [
-        "Classes control user and enemy entities with levels and attributes; functions drive mechanics, animations and audio",
-        "XP gain, XP requirements and gold scaling follow a custom formula",
-      ],
-      tags: ["HTML", "CSS", "JS", "JQUERY"],
+        "Turn-based RPG with three levels, random monster encounters and a boss per level.",
       links: [{ label: "CODE", href: "https://github.com/TomGalay/Chronicles-of-Elijah" }],
     },
     {
-      id: "PRJ-03",
+      id: "PRJ-05",
       name: "Vapour.",
       image: "/projects/Vapour.webp",
       alt: "Vapour game distribution platform screens",
       blurb:
-        "Video game digital distribution platform built for a Web Development subject.",
-      points: [
-        "Frontend: market, library and purchase modules",
-        "Backend: login/registration, purchase and add-to-library flow, error validations",
-      ],
-      tags: ["HTML", "CSS", "PHP", "MYSQL"],
+        "Video game digital distribution platform built for a Web Development course.",
       links: [{ label: "CODE", href: "https://github.com/TomGalay/Vapour" }],
     },
   ],
   other: [
     {
-      id: "PRJ-04",
+      id: "PRJ-06",
       name: "Portfolio V1",
       desc: "First portfolio site — hand-rolled animations and scroll reveals.",
-      tags: ["HTML", "CSS", "JS"],
       links: [
         { label: "CODE", href: "https://github.com/TomGalay/TomGalay.github.io" },
         { label: "VIEW", href: "https://isaiahgalay.github.io/" },
       ],
     },
     {
-      id: "PRJ-05",
+      id: "PRJ-07",
       name: "Laragigs",
       desc: "Job listing platform with auth, CRUD listings and category filters.",
-      tags: ["LARAVEL", "PHP"],
       links: [{ label: "CODE", href: "https://github.com/TomGalay/Laragigs" }],
     },
     {
-      id: "PRJ-06",
+      id: "PRJ-08",
       name: "WordPress Demo",
       desc: "Custom plugin and themes — registration with profiles and an admin dashboard.",
-      tags: ["WORDPRESS", "PHP"],
       links: [{ label: "CODE", href: "https://github.com/TomGalay/wordpress-demo" }],
     },
   ],
