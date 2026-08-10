@@ -5,10 +5,24 @@ import { PROJECTS } from "../data.js";
 
 const ease = [0.22, 1, 0.36, 1];
 
-function Lightbox({ img, onClose }) {
+function Lightbox({ images, index, onClose, onNav }) {
+  const img = images[index];
+  const prev = () => onNav((index - 1 + images.length) % images.length);
+  const next = () => onNav((index + 1) % images.length);
+  const onPrevClick = (e) => {
+    e.stopPropagation();
+    prev();
+  };
+  const onNextClick = (e) => {
+    e.stopPropagation();
+    next();
+  };
+
   useEffect(() => {
     const onKey = (e) => {
       if (e.key === "Escape") onClose();
+      if (e.key === "ArrowLeft") prev();
+      if (e.key === "ArrowRight") next();
     };
     window.addEventListener("keydown", onKey);
     document.body.style.overflow = "hidden";
@@ -16,7 +30,7 @@ function Lightbox({ img, onClose }) {
       window.removeEventListener("keydown", onKey);
       document.body.style.overflow = "";
     };
-  }, [onClose]);
+  });
 
   return (
     <motion.div
@@ -30,6 +44,12 @@ function Lightbox({ img, onClose }) {
       transition={{ duration: 0.3, ease }}
       onClick={onClose}
     >
+      <button type="button" className="lightbox-prev" onClick={onPrevClick} aria-label="Previous image">
+        &lt;
+      </button>
+      <button type="button" className="lightbox-next" onClick={onNextClick} aria-label="Next image">
+        &gt;
+      </button>
       <motion.figure
         className="lightbox-fig"
         initial={{ scale: 0.96, y: 14, opacity: 0 }}
@@ -38,8 +58,20 @@ function Lightbox({ img, onClose }) {
         transition={{ duration: 0.35, ease }}
         onClick={(e) => e.stopPropagation()}
       >
-        <img src={img.src} alt={img.alt} />
-        <figcaption className="lightbox-note">{img.alt}</figcaption>
+        <motion.img
+          key={img.src}
+          src={img.src}
+          alt={img.alt}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.3, ease }}
+        />
+        <figcaption className="lightbox-note">
+          <span>
+            {String(index + 1).padStart(2, "0")} / {String(images.length).padStart(2, "0")}
+          </span>
+          <span>{img.alt}</span>
+        </figcaption>
       </motion.figure>
       <button type="button" className="lightbox-close" onClick={onClose} aria-label="Close enlarged view">
         CLOSE ✕
@@ -120,12 +152,20 @@ function WebShowcase({ p }) {
           />
         </AnimatePresence>
         <span className="zoom-hint" aria-hidden="true">
-          ⤢ ENLARGE
+          <i>+</i>
+          ENLARGE
         </span>
       </button>
       <ThumbStrip p={p} active={active} setActive={setActive} />
       <AnimatePresence>
-        {zoom !== null && <Lightbox img={p.images[zoom]} onClose={() => setZoom(null)} />}
+        {zoom !== null && (
+          <Lightbox
+            images={p.images}
+            index={zoom}
+            onClose={() => setZoom(null)}
+            onNav={setZoom}
+          />
+        )}
       </AnimatePresence>
     </div>
   );
@@ -160,7 +200,8 @@ function MobileShowcase({ p }) {
               />
             </AnimatePresence>
             <span className="zoom-hint" aria-hidden="true">
-              ⤢
+              <i>+</i>
+              ENLARGE
             </span>
           </button>
           <span className="phone-home" aria-hidden="true" />
@@ -168,7 +209,14 @@ function MobileShowcase({ p }) {
       </div>
       <ThumbStrip p={p} active={active} setActive={setActive} phone />
       <AnimatePresence>
-        {zoom !== null && <Lightbox img={p.images[zoom]} onClose={() => setZoom(null)} />}
+        {zoom !== null && (
+          <Lightbox
+            images={p.images}
+            index={zoom}
+            onClose={() => setZoom(null)}
+            onNav={setZoom}
+          />
+        )}
       </AnimatePresence>
     </div>
   );
@@ -242,20 +290,6 @@ export default function Projects() {
               </motion.article>
             ))}
           </div>
-        </div>
-
-        <div className="proj-other">
-          <motion.div
-            className="proj-other-head"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true, margin: "-60px" }}
-            transition={{ duration: 0.6, ease }}
-          >
-            <span className="sheet-tab">SUB-ASSEMBLIES</span>
-            <h3 className="proj-other-title">Other Learning Units</h3>
-            <span className="proj-other-note">SMALLER BUILDS FOR SKILL DEVELOPMENT</span>
-          </motion.div>
 
           <div className="proj-mini-grid">
             {PROJECTS.other.map((p, i) => (

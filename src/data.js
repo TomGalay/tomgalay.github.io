@@ -259,7 +259,7 @@ export const AWARDS = [
     title: "SUMMA CUM LAUDE",
     issuer: "FEU ALABANG",
     year: "2023",
-    link: "https://www.facebook.com/FEUAlabang/photos/a.1304249696289861/5460492983998824/",
+    link: "https://www.facebook.com/photo/?fbid=608447027958485&set=a.482462397223616",
   },
   {
     title: "MOST OUTSTANDING ITE STUDENT",
