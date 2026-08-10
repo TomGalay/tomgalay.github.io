@@ -56,7 +56,7 @@ export default function Experience() {
         01
       </span>
       <div className="wrap">
-        <SheetHeader no="01" title="Work Experience" note="INTERACTIVE ASSEMBLY LOG — SELECT A REVISION TO INSPECT" />
+        <SheetHeader no="01" title="Work Experience" note="CAREER TIMELINE — SELECT A ROLE TO INSPECT" />
 
         {isMobile ? (
           <ol className="tl-acc">
