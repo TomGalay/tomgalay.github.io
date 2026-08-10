@@ -226,11 +226,11 @@ export default function Projects() {
   return (
     <section id="projects">
       <span className="sheet-no" aria-hidden="true">
-        03
+        02
       </span>
       <div className="wrap">
         <SheetHeader
-          no="03"
+          no="02"
           title="Projects & Showcases"
           note="FABRICATION SAMPLES — CLIENT WORK & SELECTED BUILDS"
         />

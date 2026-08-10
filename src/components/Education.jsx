@@ -75,7 +75,7 @@ export default function Education() {
             transition={{ duration: 0.6, ease }}
           >
             <span className="sheet-tab">COMPETITION RECORD</span>
-            <h3 className="comps-title">Four for Four — Champion Finishes</h3>
+            <h3 className="comps-title">Four-Time Programming & Cloud Champion</h3>
             <span className="comps-note">COLLEGIATE PROGRAMMING & CLOUD COMPETITIONS · 2021</span>
           </motion.div>
 

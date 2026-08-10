@@ -12,10 +12,10 @@ export default function Skills() {
   return (
     <section id="skills">
       <span className="sheet-no" aria-hidden="true">
-        02
+        03
       </span>
       <div className="wrap">
-        <SheetHeader no="02" title="Skills" note="TECH STACK — WEB · MOBILE" />
+        <SheetHeader no="03" title="Skills" note="TECH STACK — WEB · MOBILE" />
 
         <div className="skill-groups">
           {SKILL_GROUPS.map((group, i) => (
