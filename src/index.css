@@ -1397,43 +1397,62 @@ section {
 
 /* ---------- skills (bill of materials) ---------- */
 
-.skill-groups {
-  display: flex;
-  flex-direction: column;
-  gap: 28px;
+.bom {
+  border-top: 1px solid var(--line-strong);
 }
 
-.sg-head {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: 10px 16px;
-  margin-bottom: 14px;
+.bom-row {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  border-bottom: 1px solid var(--line);
 }
 
-.sg-name {
+.bom-id {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 18px;
+  border-right: 1px solid var(--line);
+}
+
+.bom-glyph {
+  width: 20px;
+  height: 20px;
+  flex: none;
+  color: var(--amber);
+}
+
+.bom-name {
   font-family: var(--display);
   font-weight: 400;
-  font-size: clamp(20px, 2.2vw, 26px);
+  font-size: clamp(16px, 1.7vw, 20px);
   letter-spacing: 0.02em;
   text-transform: uppercase;
 }
 
-.sg-tiles {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-  gap: 10px;
-  list-style: none;
-  padding-top: 14px;
-  border-top: 1px solid var(--line);
+.bom-note {
+  display: block;
+  margin-top: 4px;
+  font-family: var(--mono);
+  font-size: 9.5px;
+  letter-spacing: 0.16em;
+  color: var(--ink-dim);
 }
 
-.sg-tile {
-  position: relative;
+.bom-items {
   display: flex;
-  flex-direction: column;
-  gap: 6px;
-  padding: 12px 14px 10px;
+  flex-wrap: wrap;
+  align-content: center;
+  gap: 8px;
+  padding: 14px 18px;
+  list-style: none;
+}
+
+.bom-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 7px 11px;
   border: 1px solid var(--line-strong);
   transition:
     transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
@@ -1441,92 +1460,171 @@ section {
     background 0.3s;
 }
 
-.sg-tile::before,
-.sg-tile::after {
-  content: "";
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-
-.sg-tile::before {
-  top: -1px;
-  left: -1px;
-  border-top: 2px solid var(--amber);
-  border-left: 2px solid var(--amber);
-}
-
-.sg-tile::after {
-  right: -1px;
-  bottom: -1px;
-  border-bottom: 2px solid var(--amber);
-  border-right: 2px solid var(--amber);
-}
-
-.sg-tile:hover {
-  transform: translateY(-5px);
+.bom-item:hover {
+  transform: translateY(-3px);
   border-color: var(--cyan-line-strong);
   background: var(--cyan-wash);
 }
 
-.sg-tile:hover::before,
-.sg-tile:hover::after {
-  opacity: 1;
+.bom-item-no {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  color: var(--ink-dim);
 }
 
-.sg-tile-no {
+.bom-item-glyph {
+  width: 14px;
+  height: 14px;
+  flex: none;
+  color: var(--ink-dim);
+  transition: color 0.3s;
+}
+
+.bom-item:hover .bom-item-glyph {
+  color: var(--cyan);
+}
+
+.bom-item-name {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* ---------- certification register ---------- */
+
+.certs {
+  margin-top: 64px;
+  border-top: 1px solid var(--line-strong);
+}
+
+.cert-row {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  border-bottom: 1px solid var(--line);
+}
+
+.cert-issuer {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 18px;
+  border-right: 1px solid var(--line);
+}
+
+.cert-logo {
+  width: 44px;
+  height: 44px;
+  flex: none;
+  overflow: hidden;
+  border: 1px solid var(--line-strong);
+}
+
+.cert-logo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cert-issuer-name {
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: clamp(16px, 1.7vw, 20px);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.cert-count {
+  display: block;
+  margin-top: 4px;
   font-family: var(--mono);
   font-size: 9.5px;
   letter-spacing: 0.16em;
   color: var(--ink-dim);
 }
 
-.sg-tile-name {
+.cert-entries {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  list-style: none;
+}
+
+.cert-entry {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  padding: 12px 18px;
+  transition: background 0.3s;
+}
+
+.cert-entry + .cert-entry {
+  border-top: 1px dashed var(--line);
+}
+
+.cert-entry:hover {
+  background: var(--cyan-wash);
+}
+
+.cert-no {
+  flex: none;
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  color: var(--amber);
+}
+
+.cert-entry-id {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.cert-name {
   font-family: var(--display);
   font-weight: 400;
-  font-size: clamp(16px, 1.8vw, 21px);
+  font-size: clamp(15px, 1.6vw, 18px);
   letter-spacing: 0.02em;
   text-transform: uppercase;
   transition: color 0.3s;
 }
 
-.sg-tile:hover .sg-tile-name {
+.cert-entry:hover .cert-name {
   color: var(--cyan);
 }
 
-.sg-glyph {
-  width: 20px;
-  height: 20px;
-  flex: none;
-  align-self: center;
+.cert-sub {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
   color: var(--ink-dim);
 }
 
-.sg-tile-glyph {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  width: 18px;
-  height: 18px;
+.cert-issued {
+  margin-left: auto;
+  flex: none;
+  font-family: var(--mono);
+  font-size: 9.5px;
+  letter-spacing: 0.14em;
   color: var(--ink-dim);
+}
+
+.cert-verify {
+  flex: none;
+  color: var(--cyan);
+  text-decoration: none;
+  font-family: var(--mono);
+  font-size: 9.5px;
+  letter-spacing: 0.14em;
   transition: color 0.3s;
 }
 
-.sg-tile-glyph svg {
-  display: block;
-  width: 100%;
-  height: 100%;
-  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.sg-tile:hover .sg-tile-glyph {
-  color: var(--cyan);
-}
-
-.sg-tile:hover .sg-tile-glyph svg {
-  transform: translateY(-2px);
+.cert-verify:hover {
+  color: var(--amber);
 }
 
 /* ---------- projects & showcases ---------- */
@@ -2697,6 +2795,11 @@ a.stamp {
   .comps-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .bom-row,
+  .cert-row {
+    grid-template-columns: 220px 1fr;
+  }
 }
 
 @media (max-width: 880px) {
@@ -2719,6 +2822,17 @@ a.stamp {
 
   .proj-mini-grid {
     grid-template-columns: 1fr;
+  }
+
+  .bom-row,
+  .cert-row {
+    display: block;
+  }
+
+  .bom-id,
+  .cert-issuer {
+    border-right: none;
+    padding-bottom: 0;
   }
 }
 
@@ -2798,6 +2912,18 @@ a.stamp {
 
   .comps-grid {
     grid-template-columns: 1fr;
+  }
+
+  .cert-entry {
+    flex-wrap: wrap;
+  }
+
+  .cert-issued {
+    margin-left: 0;
+  }
+
+  .cert-verify {
+    margin-left: auto;
   }
 
   .contact-grid {

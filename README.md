@@ -61,6 +61,7 @@ All copy lives in **`src/data.js`** — you should never need to touch component
 - **Profile** — `PROFILE` (name, contact, doc number, revision, status).
 - **Experience** — `EXPERIENCE` array, newest first. Each entry needs a unique sequential `rev` (`REV.A` is the oldest), a short `span` for the timeline spine, plus `period`, `place`, `summary`, `points`, `tags`, and `current: true` for ongoing roles.
 - **Skills** — `SKILL_GROUPS`. Groups are rendered in order; part numbers (`P-01`…) are assigned automatically. **Do not add ratings, levels, or scores** — the display is intentionally unrated.
+- **Certifications** — `CERTIFICATIONS`. Each entry needs an `id` (`CRT-01`…), `name`, optional `sub`, `issuer`, `logo` (in `public/projects/certifications/`), `issued`, and a Credly `link`.
 - **Stack model** — `STACK_LAYERS` (bottom → top) and `STACK_CALLOUTS` (floating annotations).
 - **Education / Awards / Footer revisions** — `EDUCATION`, `AWARDS`, `REVISIONS`.
 

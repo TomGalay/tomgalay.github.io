@@ -139,6 +139,71 @@ export const SKILL_GROUPS = [
   },
 ];
 
+export const CERTIFICATIONS = [
+  {
+    id: "CRT-01",
+    name: "CCNA",
+    sub: "Enterprise Networking, Security, and Automation",
+    issuer: "Cisco",
+    logo: "/projects/certifications/cisco_logo.jpg",
+    issued: "APR 2022",
+    link: "https://www.credly.com/badges/346daed0-c0a0-467d-a068-2ef679bab10e?source=linked_in_profile",
+  },
+  {
+    id: "CRT-02",
+    name: "IT Specialist",
+    sub: "Java",
+    issuer: "Certiport — A Pearson VUE Business",
+    logo: "/projects/certifications/certiport_logo.jpg",
+    issued: "MAR 2022",
+    link: "https://www.credly.com/earner/earned/badge/fc06984a-d61a-4622-a4ff-66e8c3061ab5",
+  },
+  {
+    id: "CRT-03",
+    name: "DevNet Associate",
+    issuer: "Cisco",
+    logo: "/projects/certifications/cisco_logo.jpg",
+    issued: "AUG 2021",
+    link: "https://www.credly.com/earner/earned/badge/5c988029-642f-4e08-a418-b988bcfa98ce",
+  },
+  {
+    id: "CRT-04",
+    name: "CCNA",
+    sub: "Switching, Routing, and Wireless Essentials",
+    issuer: "Cisco",
+    logo: "/projects/certifications/cisco_logo.jpg",
+    issued: "JAN 2022",
+    link: "https://www.credly.com/earner/earned/badge/d2418596-c73e-423e-b738-decfe69f980b",
+  },
+  {
+    id: "CRT-05",
+    name: "Azure Fundamentals",
+    sub: "Microsoft Certified",
+    issuer: "Microsoft",
+    logo: "/projects/certifications/microsoft_logo.jpg",
+    issued: "MAY 2021",
+    link: "https://www.credly.com/badges/f87d5260-f8a6-4cbb-accd-b3c475132585",
+  },
+  {
+    id: "CRT-06",
+    name: "Microsoft 365 Fundamentals",
+    sub: "Microsoft 365 Certified",
+    issuer: "Microsoft",
+    logo: "/projects/certifications/microsoft_logo.jpg",
+    issued: "MAY 2021",
+    link: "https://www.credly.com/badges/5c041b65-cad2-4071-abaf-92c64d764c4d",
+  },
+  {
+    id: "CRT-07",
+    name: "Database Administration Fundamentals",
+    sub: "Microsoft Technology Associate (MTA)",
+    issuer: "Microsoft",
+    logo: "/projects/certifications/microsoft_logo.jpg",
+    issued: "NOV 2019",
+    link: "https://www.credly.com/badges/c6e5da4b-09a2-4147-ae5d-3e4eb5987bfa/linked_in_profile",
+  },
+];
+
 export const STACK_LAYERS = [
   { id: "L1", name: "Infrastructure", parts: ["AWS EC2", "BACKUPS", "SECURITY"] },
   { id: "L2", name: "Data Layer", parts: ["MYSQL", "APIS", "FIREBASE"] },
