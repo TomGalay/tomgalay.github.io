@@ -2828,15 +2828,41 @@ a.stamp {
   transform: scaleX(1);
 }
 
-.comp-result {
+.comp-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
   align-self: flex-start;
-  padding: 3px 8px;
-  border: 1px solid var(--amber);
+  padding: 8px 10px 7px;
+  border: 1px dashed var(--line-strong);
+  background: var(--surface);
+  transition: border-color 0.3s;
+}
+
+.comp-trophy {
+  width: 20px;
+  height: 20px;
   color: var(--amber);
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.comp-badge-plate {
+  padding: 2px 7px;
+  background: var(--amber);
+  color: var(--on-accent);
   font-family: var(--mono);
-  font-size: 9.5px;
+  font-size: 8px;
   font-weight: 600;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.2em;
+}
+
+.comp:hover .comp-badge {
+  border-color: var(--amber-line-strong);
+}
+
+.comp:hover .comp-trophy {
+  transform: translateY(-2px);
 }
 
 .comp-title {
