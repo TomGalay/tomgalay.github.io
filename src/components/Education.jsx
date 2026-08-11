@@ -76,7 +76,7 @@ export default function Education() {
           >
             <span className="sheet-tab">COMPETITION RECORD</span>
             <h3 className="comps-title">Four-Time Programming & Cloud Champion</h3>
-            <span className="comps-note">COLLEGIATE PROGRAMMING & CLOUD COMPETITIONS · 2021</span>
+            <span className="comps-note">extracurriculars during my time in school</span>
           </motion.div>
 
           <div className="comps-grid">

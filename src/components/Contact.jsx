@@ -9,7 +9,7 @@ export default function Contact() {
         05
       </span>
       <div className="wrap">
-        <SheetHeader no="05" tab="GET STARTED" title="Contact" note="REACH OUT — RESPONSE WITHIN 24 HOURS" />
+        <SheetHeader no="05" tab="REACH OUT" title="Contact" note="response as soon as possible" />
 
         <motion.p
           className="contact-eyebrow"
@@ -18,7 +18,7 @@ export default function Contact() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          RFQ — SEND YOUR PROJECT BRIEF TO:
+          EMAIL ME AT
         </motion.p>
 
         <motion.a

@@ -47,9 +47,9 @@ export default function Landing() {
             I BUILD THE <em>SYSTEMS</em> THAT RUN THE SHIFT.
           </motion.p>
           <motion.p className="landing-sub" variants={fade} initial="hidden" animate="show" custom={5}>
-            Full-stack developer behind an Australian NDIS provider's operating software —{" "}
-            <b>intake pipelines, scheduling engines, payments and mobile shift tracking</b> — designed,
-            shipped and maintained on AWS.
+            Full-stack developer that built a complete system for an NDIS Service Provider based in{" "}
+            Australia. Intaking pipelines, scheduling and shifts, users and reports Management, and
+            Document Auditing - designed, shipped, and maintained in AWS.
           </motion.p>
           <motion.div className="landing-cta" variants={fade} initial="hidden" animate="show" custom={6}>
             <a className="btn btn-solid" href="#work">

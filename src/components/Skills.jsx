@@ -15,7 +15,7 @@ export default function Skills() {
         03
       </span>
       <div className="wrap">
-        <SheetHeader no="03" title="Skills" note="TECH STACK — WEB · MOBILE" />
+        <SheetHeader no="03" tab="STACK" title="Skills" note="WEB · MOBILE" />
 
         <div className="skill-groups">
           {SKILL_GROUPS.map((group, i) => (
@@ -28,13 +28,8 @@ export default function Skills() {
               transition={{ duration: 0.65, delay: (i % 2) * 0.08, ease }}
             >
               <div className="sg-head">
-                <span className="sg-id">{group.id}</span>
                 <GroupGlyph id={group.id} className="sg-glyph" />
                 <h3 className="sg-name">{group.name}</h3>
-                <span className="sg-note">{group.note}</span>
-                <span className="sg-count">
-                  {String(group.items.length).padStart(2, "0")} ITEMS
-                </span>
               </div>
               <ul className="sg-tiles">
                 {group.items.map((item, j) => {

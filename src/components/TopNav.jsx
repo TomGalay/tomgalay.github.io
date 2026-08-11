@@ -7,7 +7,7 @@ const SECTIONS = [
   { id: "projects", no: "02", label: "HIGHLIGHTS" },
   { id: "skills", no: "03", label: "SKILLS" },
   { id: "education", no: "04", label: "BACKGROUND" },
-  { id: "contact", no: "05", label: "GET STARTED" },
+  { id: "contact", no: "05", label: "REACH OUT" },
 ];
 
 const THEMES = ["light", "dark", "blue"];
