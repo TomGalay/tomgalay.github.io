@@ -52,7 +52,7 @@ export default function Landing() {
             Document Auditing - designed, shipped, and maintained in AWS.
           </motion.p>
           <motion.div className="landing-cta" variants={fade} initial="hidden" animate="show" custom={6}>
-            <a className="btn btn-solid" href="#work">
+            <a className="btn btn-solid" href="#projects">
               SEE MY WORKS ↓
             </a>
             <a className="btn btn-ghost" href={`mailto:${PROFILE.email}`}>

@@ -15,7 +15,7 @@ export default function Skills() {
         03
       </span>
       <div className="wrap">
-        <SheetHeader no="03" tab="STACK" title="Skills" note="WEB · MOBILE" />
+        <SheetHeader no="03" tab="STACK" title="Skills & Certifications" note="WEB · MOBILE" />
 
         <div className="skill-groups">
           {SKILL_GROUPS.map((group, i) => (

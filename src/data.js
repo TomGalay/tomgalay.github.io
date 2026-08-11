@@ -151,23 +151,9 @@ export const PROJECTS = {
   featured: [
     {
       id: "PRJ-01",
-      layout: "web",
-      name: "WinLi Home",
-      client: "STRUCTURAL ENGINEERING · ALHAMBRA, CA",
-      url: "winlihome.com",
-      blurb:
-        "Developed and designed a website for a Structural Engineering Company in Alhambra, CA. Worked on the branding, design, and website.",
-      images: [
-        { src: "/projects/winli/winlihome-1.png", alt: "WinLi Home website — home page" },
-        { src: "/projects/winli/winlihome-2.png", alt: "WinLi Home website — services page" },
-        { src: "/projects/winli/winlihome-3.png", alt: "WinLi Home website — contact page" },
-      ],
-      links: [{ label: "VISIT SITE", href: "https://winlihome.com/" }],
-    },
-    {
-      id: "PRJ-02",
       layout: "mobile",
       name: "New Life Sta Rosa",
+      date: "2026",
       client: "FULL-STACK CHURCH APP · IOS · ANDROID · WEB CMS",
       blurb:
         "Worked in a team to create a full stack application for a local church. An iOS and Android mobile app was created featuring announcements, events, videos, and livestreaming for church members and guests supported with reminders, push notifications, and Firebase login. A CMS is provided to the administrators in the web.",
@@ -183,6 +169,22 @@ export const PROJECTS = {
         { label: "APP STORE", href: "https://apps.apple.com/ph/app/new-life-sta-rosa/id6787141995" },
         { label: "PLAY STORE", href: "#" },
       ],
+    },
+    {
+      id: "PRJ-02",
+      layout: "web",
+      name: "WinLi Home",
+      date: "2024",
+      client: "STRUCTURAL ENGINEERING · ALHAMBRA, CA",
+      url: "winlihome.com",
+      blurb:
+        "Developed and designed a website for a Structural Engineering Company in Alhambra, CA. Worked on the branding, design, and website.",
+      images: [
+        { src: "/projects/winli/winlihome-1.png", alt: "WinLi Home website — home page" },
+        { src: "/projects/winli/winlihome-2.png", alt: "WinLi Home website — services page" },
+        { src: "/projects/winli/winlihome-3.png", alt: "WinLi Home website — contact page" },
+      ],
+      links: [{ label: "VISIT SITE", href: "https://winlihome.com/" }],
     },
   ],
   archive: [

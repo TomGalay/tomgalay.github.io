@@ -249,7 +249,10 @@ export default function Projects() {
               {p.layout === "web" ? <WebShowcase p={p} /> : <MobileShowcase p={p} />}
               <div className="show-body">
                 <span className="show-client">{p.client}</span>
-                <h3 className="show-name">{p.name}</h3>
+                <h3 className="show-name">
+                  {p.name}
+                  <span className="show-date">{p.date}</span>
+                </h3>
                 <p className="show-blurb">{p.blurb}</p>
                 <LinkRow links={p.links} />
               </div>

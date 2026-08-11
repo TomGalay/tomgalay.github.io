@@ -1592,6 +1592,9 @@ section {
 }
 
 .show-name {
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
   margin-top: 10px;
   font-family: var(--display);
   font-weight: 400;
@@ -1599,6 +1602,18 @@ section {
   line-height: 0.95;
   letter-spacing: 0.02em;
   text-transform: uppercase;
+}
+
+.show-name .show-date {
+  display: inline-block;
+  margin-left: 10px;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0.14em;
+  color: var(--ink-dim);
+  white-space: nowrap;
 }
 
 .show-blurb {
