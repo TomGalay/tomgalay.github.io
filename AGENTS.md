@@ -26,7 +26,7 @@ There is no lint, typecheck, or test setup. `npm run build` is the verification 
 ## Conventions
 
 - **No code comments** unless explicitly asked.
-- Content edits: update `src/data.js` only. Experience entries need unique sequential `rev` values (oldest = `REV.A`), a `span` for the timeline spine, and `current: true` when ongoing.
+- Content edits: update `src/data.js` only. Experience entries need unique sequential `rev` values (oldest = `REV.A`), `start`/`end` months (`"YYYY-MM"`, `end: null` when ongoing) that position the bar on the career schedule chart, a `span`, and `current: true` when ongoing. Roles are grouped by `company` automatically.
 - **Skills must stay unrated** — never add levels, bars, percentages, or scores. Group via `SKILL_GROUPS` only.
 - Styling: use the CSS custom properties (`--paper`, `--cyan`, `--amber`, `--line*`, `--ink*`); reuse existing classes (`.tag`, `.btn`, `.dim-line`, `.sheet-*`) before adding new ones. Square corners, no glassmorphism, no gradient text.
 - Motion: Framer Motion with the house easing `[0.22, 1, 0.36, 1]`; reveals via `whileInView` + `once: true`. Preserve `prefers-reduced-motion` and `pointer: coarse` fallbacks.

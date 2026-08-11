@@ -1,6 +1,6 @@
 # Isaiah Thomas Galay — Spec Sheet Résumé
 
-A creative developer résumé built as an **interactive engineering spec sheet**: blueprint grid, CAD crosshair cursor, a 3D isometric model of the system layers Isaiah builds, a revision-controlled work-experience timeline, and awards rendered as rubber stamps.
+A creative developer résumé built as an **interactive engineering spec sheet**: blueprint grid, CAD crosshair cursor, a 3D isometric model of the system layers Isaiah builds, a work-experience career schedule chart, and awards rendered as rubber stamps.
 
 Built with **React + Vite + Framer Motion**. No UI framework, no component library — one hand-rolled design system in `src/index.css`.
 
@@ -20,7 +20,7 @@ The site treats the résumé as a controlled engineering document:
 | Sheet | Section | Treatment |
 | ----- | ------- | --------- |
 | 00 | Title | Statement display + interactive 3D system stack + title-block data strip |
-| 01 | Experience | Interactive revision timeline (hover/click a REV to inspect; prev/next controls) |
+| 01 | Experience | Career schedule chart — roles grouped by employer as bars on a time axis, with a pulsing NOW line (hover/click a bar to inspect; prev/next REV controls) |
 | 02 | Skills | Bill of materials — grouped by function, deliberately **unrated** |
 | 03 | Education & Awards | Certification record with stamp-in award seals |
 | 04 | Contact | Transmit block with direct lines |
@@ -44,7 +44,7 @@ Navigation is a sticky **sheet-tab bar** (CAD-style) with scroll-spy and a readi
 │       ├── SystemStack.jsx # 3D isometric layer model (CSS 3D + pointer tilt)
 │       ├── Crosshair.jsx   # CAD cursor overlay
 │       ├── SheetHeader.jsx # Shared sheet title + dimension line
-│       ├── Experience.jsx  # Sheet 01 — interactive timeline / mobile accordion
+│       ├── Experience.jsx  # Sheet 01 — career schedule chart / grouped mobile accordion
 │       ├── Skills.jsx      # Sheet 02 — grouped bill of materials
 │       ├── Education.jsx   # Sheet 03 — record + award stamps
 │       ├── Contact.jsx     # Sheet 04
@@ -59,7 +59,7 @@ Navigation is a sticky **sheet-tab bar** (CAD-style) with scroll-spy and a readi
 All copy lives in **`src/data.js`** — you should never need to touch components to update the résumé.
 
 - **Profile** — `PROFILE` (name, contact, doc number, revision, status).
-- **Experience** — `EXPERIENCE` array, newest first. Each entry needs a unique sequential `rev` (`REV.A` is the oldest), a short `span` for the timeline spine, plus `period`, `place`, `summary`, `points`, `tags`, and `current: true` for ongoing roles.
+- **Experience** — `EXPERIENCE` array, newest first. Each entry needs a unique sequential `rev` (`REV.A` is the oldest), `start`/`end` months (`"YYYY-MM"`, `end: null` for ongoing) that position its bar on the schedule chart, a short `span`, plus `period`, `place`, `summary`, `points`, `tags`, and `current: true` for ongoing roles. Roles are grouped by `company` automatically (append ` · Internship` to the company name for internship groups); overlapping roles at the same employer show as concurrent bars.
 - **Skills** — `SKILL_GROUPS`. Groups are rendered in order; part numbers (`P-01`…) are assigned automatically. **Do not add ratings, levels, or scores** — the display is intentionally unrated.
 - **Certifications** — `CERTIFICATIONS`. Each entry needs an `id` (`CRT-01`…), `name`, optional `sub`, `issuer`, `logo` (in `public/projects/certifications/`), `issued`, and a Credly `link`.
 - **Stack model** — `STACK_LAYERS` (bottom → top) and `STACK_CALLOUTS` (floating annotations).
