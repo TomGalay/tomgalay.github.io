@@ -9,7 +9,7 @@ export default function Contact() {
         05
       </span>
       <div className="wrap">
-        <SheetHeader no="05" title="Contact" note="REACH OUT — RESPONSE WITHIN 24 HOURS" />
+        <SheetHeader no="05" tab="GET STARTED" title="Contact" note="REACH OUT — RESPONSE WITHIN 24 HOURS" />
 
         <motion.p
           className="contact-eyebrow"

@@ -231,8 +231,9 @@ export default function Projects() {
       <div className="wrap">
         <SheetHeader
           no="02"
-          title="Projects & Showcases"
-          note="FABRICATION SAMPLES — CLIENT WORK & SELECTED BUILDS"
+          tab="HIGHLIGHTS"
+          title="Projects"
+          note="showcasing some of my professional works"
         />
 
         <div className="show-list">
@@ -265,8 +266,8 @@ export default function Projects() {
             transition={{ duration: 0.6, ease }}
           >
             <span className="sheet-tab">ARCHIVE</span>
-            <h3 className="proj-other-title">Academic & Personal Builds</h3>
-            <span className="proj-other-note">EARLIER FABRICATION RUNS</span>
+            <h3 className="proj-other-title">Other Works</h3>
+            <span className="proj-other-note">personal and college projects that I made throughout the times</span>
           </motion.div>
 
           <div className="proj-grid">

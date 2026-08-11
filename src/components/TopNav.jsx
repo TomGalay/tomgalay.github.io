@@ -3,11 +3,11 @@ import { motion } from "framer-motion";
 
 const SECTIONS = [
   { id: "title", no: "00", label: "TITLE" },
-  { id: "experience", no: "01", label: "EXPERIENCE" },
-  { id: "projects", no: "02", label: "PROJECTS" },
+  { id: "experience", no: "01", label: "CAREER" },
+  { id: "projects", no: "02", label: "HIGHLIGHTS" },
   { id: "skills", no: "03", label: "SKILLS" },
-  { id: "education", no: "04", label: "EDUCATION" },
-  { id: "contact", no: "05", label: "CONTACT" },
+  { id: "education", no: "04", label: "BACKGROUND" },
+  { id: "contact", no: "05", label: "GET STARTED" },
 ];
 
 const THEMES = ["light", "dark", "blue"];

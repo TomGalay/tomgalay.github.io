@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
 
-export default function SheetHeader({ no, title, note }) {
+export default function SheetHeader({ no, title, note, tab }) {
   return (
     <>
       <div className="sheet-head">
-        <span className="sheet-tab">SHEET {no}</span>
+        <span className="sheet-tab">{tab ?? `SHEET ${no}`}</span>
         <motion.h2
           className="sheet-title"
           initial={{ opacity: 0, y: 30 }}

@@ -11,7 +11,7 @@ export default function Education() {
         04
       </span>
       <div className="wrap">
-        <SheetHeader no="04" title="Education & Honors" note="CERTIFICATION RECORDS — VERIFIED" />
+        <SheetHeader no="04" tab="BACKGROUND" title="Education & Honors" note="CERTIFICATION RECORDS — VERIFIED" />
 
         <div className="edu-grid">
           <motion.div

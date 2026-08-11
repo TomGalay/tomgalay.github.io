@@ -56,7 +56,7 @@ export default function Experience() {
         01
       </span>
       <div className="wrap">
-        <SheetHeader no="01" title="Work Experience" note="CAREER TIMELINE — SELECT A ROLE TO INSPECT" />
+        <SheetHeader no="01" tab="CAREER" title="Work Experience" note="hover on a role to see more details" />
 
         {isMobile ? (
           <ol className="tl-acc">
