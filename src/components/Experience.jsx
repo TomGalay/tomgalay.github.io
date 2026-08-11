@@ -95,7 +95,7 @@ function JobBody({ job }) {
       </div>
       {concurrent.length > 0 && (
         <p className="gnt-conc">
-          ⟂ CONCURRENT WITH {concurrent.map((o) => `${o.role.toUpperCase()} (${o.rev})`).join(" · ")}
+          ⟂ CONCURRENT WITH {concurrent.map((o) => o.role.toUpperCase()).join(" · ")}
         </p>
       )}
     </>
@@ -227,7 +227,6 @@ function Traverse({ active, setActive }) {
                 onClick={() => setActive(idx)}
               >
                 <span className="tlx-tab-head">
-                  <span className="tlx-tab-rev">{j.rev}</span>
                   <span className={`tlx-tab-span${j.current ? " now" : ""}`}>
                     {j.current ? `${fmt(mi(j.start))} — NOW` : j.span.toUpperCase()}
                   </span>
@@ -270,7 +269,6 @@ function MobileGroups({ open, setOpen }) {
                   >
                     <span className="gnt-m-titles">
                       <span className="gnt-m-role">{j.role}</span>
-                      <span className="gnt-m-rev">{j.rev}</span>
                     </span>
                     <span className="gnt-m-span">{j.span}</span>
                     <span className="gnt-m-ind" aria-hidden="true">
@@ -333,9 +331,7 @@ export default function Experience() {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1, left: `${pos(mi(job.start))}%` }}
                   transition={{ duration: 0.5, ease }}
-                >
-                  <span className="tlx-leader-chip">{job.rev.slice(-1)}</span>
-                </motion.span>
+                />
               </AnimatePresence>
 
               <div className="gnt-detail">
@@ -349,10 +345,9 @@ export default function Experience() {
                     transition={{ duration: 0.45, ease }}
                   >
                     <span className="gnt-ghost" aria-hidden="true">
-                      {job.rev}
+                      {job.company.split(" · ")[0]}
                     </span>
                     <div className="gnt-top">
-                      <span className="gnt-revchip">{job.rev}</span>
                       <h3>{job.role}</h3>
                       <span className="gnt-company">{job.company.split(" · ")[0]}</span>
                       <span className="gnt-meta">
@@ -371,7 +366,7 @@ export default function Experience() {
                     onClick={() => setActive(active - 1)}
                     disabled={active === 0}
                   >
-                    ← PREV REV
+                    ← PREV ROLE
                   </button>
                   <button
                     type="button"
@@ -379,7 +374,7 @@ export default function Experience() {
                     onClick={() => setActive(active + 1)}
                     disabled={active === EXPERIENCE.length - 1}
                   >
-                    NEXT REV →
+                    NEXT ROLE →
                   </button>
                   <span className="gnt-count">
                     <b>{String(active + 1).padStart(2, "0")}</b> / {String(EXPERIENCE.length).padStart(2, "0")}
@@ -400,10 +395,6 @@ export default function Experience() {
               <span className="gnt-key">
                 <i className="tlx-key-break" />
                 SCALE BREAK
-              </span>
-              <span className="gnt-range">
-                {EXPERIENCE[EXPERIENCE.length - 1].rev} → {EXPERIENCE[0].rev} · {GROUPS.length} EMPLOYERS ·{" "}
-                {EXPERIENCE.length} ROLES
               </span>
             </div>
           </div>
