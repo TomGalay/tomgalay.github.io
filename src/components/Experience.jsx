@@ -13,7 +13,6 @@ const mi = (s) => {
   return y * 12 + (m - 1);
 };
 const fmt = (m) => `${MONTHS[m % 12]} ${Math.floor(m / 12)}`;
-const sta = (m) => `${Math.floor(m / 12)}+${String((m % 12) + 1).padStart(2, "0")}`;
 
 const NOW = new Date();
 const NOW_MI = NOW.getFullYear() * 12 + NOW.getMonth();
@@ -122,9 +121,19 @@ function Traverse({ active, setActive }) {
       transition={{ duration: 0.7, ease }}
     >
       <div className="tlx-plot" ref={plotRef} onMouseMove={onMove} onMouseLeave={() => setCursor(null)}>
-        <span className="tlx-note tlx-note-l">HORIZONTAL RECORD — VARIABLE SCALE</span>
         <span className="tlx-note tlx-note-r">
-          STA {sta(T0)} → STA {sta(NOW_MI)}
+          <span className="gnt-key">
+            <i className="tlx-key-diamond" />
+            ROLE NODE
+          </span>
+          <span className="gnt-key">
+            <i className="gnt-key-dot" />
+            ONGOING
+          </span>
+          <span className="gnt-key">
+            <i className="tlx-key-break" />
+            SCALE BREAK
+          </span>
         </span>
         <span className="tlx-ghost" aria-hidden="true">
           TRAVERSE
@@ -315,7 +324,7 @@ export default function Experience() {
         01
       </span>
       <div className="wrap">
-        <SheetHeader no="01" tab="CAREER" title="Work Experience" note="career traverse — select a node to inspect a role" />
+        <SheetHeader no="01" tab="CAREER" title="Work Experience" note="select a point in the timeline to inspect a role" />
 
         {isMobile ? (
           <MobileGroups open={open} setOpen={setOpen} />
@@ -381,21 +390,6 @@ export default function Experience() {
                   </span>
                 </div>
               </div>
-            </div>
-
-            <div className="gnt-legend">
-              <span className="gnt-key">
-                <i className="tlx-key-diamond" />
-                ROLE NODE
-              </span>
-              <span className="gnt-key">
-                <i className="gnt-key-dot" />
-                ONGOING
-              </span>
-              <span className="gnt-key">
-                <i className="tlx-key-break" />
-                SCALE BREAK
-              </span>
             </div>
           </div>
         )}

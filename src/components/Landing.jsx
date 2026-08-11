@@ -26,9 +26,6 @@ export default function Landing() {
     <header className="landing" id="title">
       <div className="wrap landing-grid">
         <div className="landing-copy">
-          <motion.p className="landing-eyebrow" variants={fade} initial="hidden" animate="show" custom={0}>
-            PORTFOLIO
-          </motion.p>
           <motion.h1 className="landing-name" variants={nameBlock} initial="hidden" animate="show">
             {PROFILE.name.map((part, i) => (
               <motion.span
@@ -76,20 +73,16 @@ export default function Landing() {
             <span className="tbs-v">{PROFILE.docNo}</span>
           </div>
           <div>
-            <span className="tbs-k">REVISION</span>
+            <span className="tbs-k">TYPE</span>
             <span className="tbs-v">{PROFILE.rev}</span>
           </div>
           <div>
-            <span className="tbs-k">SCALE</span>
-            <span className="tbs-v">1 : 1</span>
-          </div>
-          <div>
-            <span className="tbs-k">ISSUED FROM</span>
-            <span className="tbs-v">{PROFILE.coords}</span>
+            <span className="tbs-k">VERSION</span>
+            <span className="tbs-v">3</span>
           </div>
           <div>
             <span className="tbs-k">STATUS</span>
-            <span className="tbs-stamp">{PROFILE.status}</span>
+            <span className="tbs-ok">{PROFILE.status}</span>
           </div>
         </motion.div>
       </div>

@@ -774,6 +774,19 @@ section {
   box-shadow: 0 0 16px var(--stamp-glow);
 }
 
+.tbs-ok {
+  width: fit-content;
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  color: var(--ok);
+  border: 1.5px solid var(--ok);
+  padding: 3px 9px;
+  transform: rotate(-2deg);
+  box-shadow: 0 0 16px rgba(74, 222, 128, 0.25);
+}
+
 /* ---------- 3D system stack ---------- */
 
 .stack {
@@ -971,7 +984,12 @@ section {
 }
 
 .tlx-note-r {
-  right: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  white-space: nowrap;
 }
 
 .tlx-ghost {
@@ -1316,20 +1334,6 @@ section {
 }
 
 /* mobile: grouped accordion */
-.gnt-legend {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 10px 24px;
-  margin-top: 14px;
-  padding: 11px 18px;
-  border: 1px solid var(--line);
-  font-family: var(--mono);
-  font-size: 9.5px;
-  letter-spacing: 0.16em;
-  color: var(--ink-dim);
-}
-
 .gnt-key {
   display: inline-flex;
   align-items: center;

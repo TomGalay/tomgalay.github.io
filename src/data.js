@@ -5,11 +5,10 @@ export const PROFILE = {
   email: "tomgalay@gmail.com",
   phone: "+63 956 831 3208",
   location: "STA. ROSA, LAGUNA · PH",
-  coords: "14.3583° N — 121.1140° E",
   linkedin: "https://www.linkedin.com/in/isaiah-thomas-galay-376990175/",
   docNo: "ITG-RÉSUMÉ-0726",
-  rev: "REV.E",
-  status: "OPEN FOR PROJECTS",
+  rev: "PORTFOLIO",
+  status: "AVAILABLE FOR WORK",
 };
 
 export const EXPERIENCE = [
