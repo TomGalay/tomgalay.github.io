@@ -343,6 +343,28 @@ export default function Experience() {
                 />
               </AnimatePresence>
 
+              <div className="gnt-controls">
+                <button
+                  type="button"
+                  className="gnt-btn"
+                  onClick={() => setActive(active + 1)}
+                  disabled={active === EXPERIENCE.length - 1}
+                >
+                  ← PREV ROLE
+                </button>
+                <button
+                  type="button"
+                  className="gnt-btn"
+                  onClick={() => setActive(active - 1)}
+                  disabled={active === 0}
+                >
+                  NEXT ROLE →
+                </button>
+                <span className="gnt-count">
+                  <b>{String(active + 1).padStart(2, "0")}</b> / {String(EXPERIENCE.length).padStart(2, "0")}
+                </span>
+              </div>
+
               <div className="gnt-detail">
                 <AnimatePresence mode="wait">
                   <motion.article
@@ -368,27 +390,6 @@ export default function Experience() {
                     <JobBody job={job} />
                   </motion.article>
                 </AnimatePresence>
-                <div className="gnt-controls">
-                  <button
-                    type="button"
-                    className="gnt-btn"
-                    onClick={() => setActive(active - 1)}
-                    disabled={active === 0}
-                  >
-                    ← PREV ROLE
-                  </button>
-                  <button
-                    type="button"
-                    className="gnt-btn"
-                    onClick={() => setActive(active + 1)}
-                    disabled={active === EXPERIENCE.length - 1}
-                  >
-                    NEXT ROLE →
-                  </button>
-                  <span className="gnt-count">
-                    <b>{String(active + 1).padStart(2, "0")}</b> / {String(EXPERIENCE.length).padStart(2, "0")}
-                  </span>
-                </div>
               </div>
             </div>
           </div>

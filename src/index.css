@@ -737,9 +737,9 @@ section {
 .tb-strip > div {
   display: flex;
   flex-direction: column;
-  gap: 6px;
-  padding: 15px 26px 15px 0;
-  margin-right: 26px;
+  gap: 8px;
+  padding: 16px 42px 16px 0;
+  margin-right: 42px;
   border-right: 1px dashed var(--line);
 }
 
@@ -1362,7 +1362,7 @@ section {
 }
 
 .gnt-detail {
-  margin-top: 46px;
+  margin-top: 18px;
 }
 
 .gnt-card {
@@ -1496,20 +1496,20 @@ section {
   position: relative;
   display: flex;
   align-items: center;
-  gap: 14px;
-  margin-top: 14px;
-  padding: 14px 18px;
-  border: 1px solid var(--line-strong);
-  background: var(--surface);
+  gap: 10px;
+  margin-top: 26px;
+  padding: 8px 12px;
+  border: 1px solid var(--line);
+  background: var(--surface-soft);
 }
 
 .gnt-btn {
-  padding: 10px 16px;
+  padding: 7px 12px;
   background: none;
   border: 1px solid var(--line-strong);
   color: var(--ink);
   font-family: var(--mono);
-  font-size: 10.5px;
+  font-size: 9.5px;
   letter-spacing: 0.16em;
   cursor: pointer;
   transition:
