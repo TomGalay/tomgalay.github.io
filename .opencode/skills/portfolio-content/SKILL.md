@@ -12,7 +12,7 @@ This repo is Isaiah Thomas Galay's résumé site: React 18 + Vite + Framer Motio
 All copy lives in `src/data.js`. Never hardcode résumé content in components.
 
 - `PROFILE` — name (3-line array), role, contact, `docNo`, `rev`, `status`.
-- `EXPERIENCE` — newest first. Each entry: unique sequential `rev` (oldest role = `REV.A`), `role`, `company`, `start`/`end` months (`"YYYY-MM"`, `end: null` if ongoing) that position the bar on the career schedule chart, `period` (full), `span` (short), `place`, `summary`, `points[]`, `tags[]`, `current: true` if ongoing. Roles are grouped by `company` (append ` · Internship` for internship groups); overlapping roles at one employer render as concurrent bars.
+- `EXPERIENCE` — newest first. Each entry: unique sequential `rev` (oldest role = `REV.A`), `role`, `company`, `start`/`end` months (`"YYYY-MM"`, `end: null` if ongoing) that position the node on the career traverse timeline, `period` (full), `span` (short), `place`, `summary`, `points[]`, `tags[]`, `current: true` if ongoing. The largest multi-year gap between roles is auto-detected and drawn as a compressed scale break. Roles are grouped by `company` (append ` · Internship` for internship groups); overlapping roles at one employer are flagged as concurrent.
 - `SKILL_GROUPS` — ordered groups with `id` (`G-01`…), `name`, `note`, `items[]`. Part numbers render automatically.
 - `STACK_LAYERS` — bottom → top plates of the 3D model; `STACK_CALLOUTS` — floating annotations (`c1`–`c3` positions).
 - `EDUCATION`, `AWARDS`, `REVISIONS` — sheet 03 and the footer revision table. Keep `REVISIONS` in sync when adding experience entries.
