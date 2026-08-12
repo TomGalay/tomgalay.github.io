@@ -74,9 +74,6 @@ export default function Skills() {
                 </span>
                 <div>
                   <h3 className="cert-issuer-name">{group.issuer}</h3>
-                  <span className="cert-count">
-                    {String(group.certs.length).padStart(2, "0")} CREDENTIAL{group.certs.length > 1 ? "S" : ""}
-                  </span>
                 </div>
               </div>
               <ul className="cert-entries">

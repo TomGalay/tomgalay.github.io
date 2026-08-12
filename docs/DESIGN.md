@@ -29,6 +29,7 @@ Additional semantic colors used sparingly: `#4ade80` (status LEDs, "current" mar
 | Display | **Anton** | Headlines, sheet titles, layer plates, big numbers. Always uppercase, tight leading (~0.95). |
 | Body | **Archivo** | Paragraphs, summaries, points. |
 | Annotation | **IBM Plex Mono** | Labels, meta, tags, tabs, coordinates — everything that reads like a drafting note. Wide letter-spacing (0.1em–0.2em), small sizes (9.5–12.5px). |
+| Honor | **Cinzel** | Latin-honors plate only (summa cum laude). Classical Roman inscription serif, uppercase, centered, quiet — no glow, no animation. |
 
 Outlined text (transparent fill + `-webkit-text-stroke`) is a signature move — used for the middle name, the word "SYSTEMS", ghost REV letters, and sheet numbers.
 

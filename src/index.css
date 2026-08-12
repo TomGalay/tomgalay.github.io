@@ -50,6 +50,7 @@
   --display: "Anton", Impact, sans-serif;
   --body: "Archivo", "Helvetica Neue", sans-serif;
   --mono: "IBM Plex Mono", "Courier New", monospace;
+  --honor: "Cinzel", Georgia, "Times New Roman", serif;
 }
 
 [data-theme="dark"] {
@@ -1292,10 +1293,11 @@ section {
 }
 
 .tlx-tab-role {
-  font-family: var(--display);
+  font-family: var(--body);
+  font-weight: 600;
   font-size: 13.5px;
   line-height: 1.08;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--ink);
 }
@@ -1397,11 +1399,11 @@ section {
 }
 
 .gnt-top h3 {
-  font-family: var(--display);
-  font-weight: 400;
+  font-family: var(--body);
+  font-weight: 700;
   font-size: clamp(28px, 3.4vw, 42px);
   line-height: 1;
-  letter-spacing: 0.015em;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
 }
 
@@ -1611,9 +1613,10 @@ section {
 }
 
 .gnt-m-role {
-  font-family: var(--display);
+  font-family: var(--body);
+  font-weight: 600;
   font-size: 18px;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
@@ -1762,7 +1765,10 @@ section {
 .cert-row {
   display: grid;
   grid-template-columns: 280px 1fr;
-  border-bottom: 1px solid var(--line);
+}
+
+.cert-row + .cert-row {
+  border-top: 1px dashed var(--line-strong);
 }
 
 .cert-issuer {
@@ -1794,15 +1800,6 @@ section {
   font-size: clamp(16px, 1.7vw, 20px);
   letter-spacing: 0.02em;
   text-transform: uppercase;
-}
-
-.cert-count {
-  display: block;
-  margin-top: 4px;
-  font-family: var(--mono);
-  font-size: 9.5px;
-  letter-spacing: 0.16em;
-  color: var(--ink-dim);
 }
 
 .cert-entries {
@@ -2595,17 +2592,10 @@ section {
 .edu-degree {
   margin-top: 18px;
   font-weight: 700;
-  font-size: 16px;
-  letter-spacing: 0.05em;
+  font-size: 16.5px;
+  line-height: 1.55;
+  letter-spacing: 0.045em;
   text-transform: uppercase;
-}
-
-.edu-spec {
-  margin-top: 4px;
-  font-family: var(--mono);
-  font-size: 12px;
-  letter-spacing: 0.1em;
-  color: var(--cyan);
 }
 
 .edu-meta {
@@ -2617,18 +2607,21 @@ section {
 }
 
 .edu-honors {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 7px 14px 6px 12px;
-  border-left: 3px solid var(--amber);
+  display: block;
+  width: 100%;
+  margin-top: 28px;
+  padding: 16px 20px;
+  border-top: 1px solid var(--amber-line);
+  border-bottom: 1px solid var(--amber-line);
   background: var(--amber-wash);
-  font-family: var(--mono);
-  font-size: 13px;
+  font-family: var(--honor);
+  font-size: clamp(17px, 2vw, 22px);
   font-weight: 600;
-  letter-spacing: 0.3em;
-  text-transform: lowercase;
+  line-height: 1.2;
+  letter-spacing: 0.14em;
+  text-align: center;
+  text-transform: uppercase;
   color: var(--amber);
-  text-shadow: 0 0 22px var(--amber-glow-dim);
 }
 
 .stamps {

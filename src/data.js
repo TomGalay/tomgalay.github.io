@@ -320,8 +320,8 @@ export const PROJECTS = {
 export const EDUCATION = {
   school: "FEU ALABANG",
   place: "MUNTINLUPA",
-  degree: "BS INFORMATION TECHNOLOGY",
-  spec: "SPECIALIZATION IN WEB & MOBILE APPLICATIONS",
+  degree:
+    "BACHELOR OF SCIENCE IN INFORMATION TECHNOLOGY WITH SPECIALIZATION IN WEB & MOBILE APPLICATIONS",
   period: "2018 — 2022",
   honors: "summa cum laude",
   organizations: [

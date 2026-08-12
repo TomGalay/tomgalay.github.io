@@ -24,7 +24,6 @@ export default function Education() {
               FEU <span>ALABANG</span>
             </h3>
             <p className="edu-degree">{EDUCATION.degree}</p>
-            <p className="edu-spec">{EDUCATION.spec}</p>
             <p className="edu-meta">
               {EDUCATION.place} · {EDUCATION.period}
             </p>
