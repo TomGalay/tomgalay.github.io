@@ -495,6 +495,10 @@ section {
   scroll-margin-top: 0;
 }
 
+#education {
+  contain: paint;
+}
+
 .sheet-no {
   position: absolute;
   top: 42px;
