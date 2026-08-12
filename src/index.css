@@ -479,9 +479,16 @@ button {
 
 section {
   position: relative;
-  padding: 96px 0;
   border-top: 1px solid var(--line);
   scroll-margin-top: 64px;
+}
+
+#experience,
+#projects,
+#skills,
+#education,
+#contact {
+  padding: 96px 0;
 }
 
 #title {
@@ -1588,7 +1595,7 @@ section {
 }
 
 .gnt-m-item {
-  border-top: 1px solid var(--line);
+  border-top: 1px dashed var(--line);
 }
 
 .gnt-m-head {
@@ -1656,6 +1663,12 @@ section {
   font-size: 11px;
   letter-spacing: 0.1em;
   color: var(--cyan);
+}
+
+.gnt-m-inner .gnt-tags {
+  gap: 10px;
+  margin-top: 18px;
+  padding-bottom: 2px;
 }
 
 /* ---------- skills (bill of materials) ---------- */
@@ -2358,6 +2371,33 @@ section {
   aspect-ratio: 1206 / 2622;
 }
 
+.show-thumbs--carousel {
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.show-thumbs-nav {
+  flex: 0 0 auto;
+  width: 34px;
+  border: 1px solid var(--line-strong);
+  background: none;
+  color: var(--cyan);
+  font-family: var(--mono);
+  font-size: 13px;
+  cursor: pointer;
+  transition:
+    border-color 0.25s,
+    color 0.25s,
+    background 0.25s;
+}
+
+.show-thumbs-nav:hover {
+  border-color: var(--amber);
+  color: var(--amber);
+  background: var(--cyan-wash-strong);
+}
+
 .proj-archive {
   margin-top: 56px;
   padding-top: 34px;
@@ -3027,6 +3067,14 @@ a.stamp {
   .tlx-wrap {
     display: none;
   }
+
+  #experience {
+    padding: 0;
+  }
+
+  #projects .sheet-head {
+    margin-top: 48px;
+  }
 }
 
 @media (max-width: 1020px) {
@@ -3055,6 +3103,10 @@ a.stamp {
     grid-template-columns: 1fr;
   }
 
+  .proj-fig img {
+    max-height: 220px;
+  }
+
   .show-card,
   .show-card.flip {
     grid-template-columns: 1fr;
@@ -3062,12 +3114,14 @@ a.stamp {
 
   .show-fig,
   .show-card.flip .show-fig {
-    order: 0;
+    order: 1;
     border-right: none;
     border-left: none;
-    border-bottom: 1px solid var(--line-strong);
+    border-bottom: none;
+    border-top: 1px solid var(--line-strong);
   }
 
+  .show-card .show-body,
   .show-card.flip .show-body {
     order: 0;
   }
@@ -3112,7 +3166,10 @@ a.stamp {
     padding: 0 22px;
   }
 
-  section {
+  #projects,
+  #skills,
+  #education,
+  #contact {
     padding: 72px 0;
   }
 
@@ -3143,6 +3200,10 @@ a.stamp {
 
   .show-body {
     padding: 22px 20px 20px;
+  }
+
+  .proj-fig img {
+    max-height: 170px;
   }
 
   .phone-stage {

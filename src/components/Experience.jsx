@@ -259,10 +259,7 @@ function MobileGroups({ open, setOpen }) {
           <header className="gnt-m-gh">
             <div className="gnt-m-gh-top">
               <span className="gnt-m-co">{g.name}</span>
-              <span className="gnt-m-sub">
-                {[g.kind, g.place].filter(Boolean).join(" · ")} · {g.jobs.length}{" "}
-                {g.jobs.length > 1 ? "ROLES" : "ROLE"}
-              </span>
+              <span className="gnt-m-sub">{[g.kind, g.place].filter(Boolean).join(" · ")}</span>
             </div>
           </header>
           <ol className="gnt-m-list">

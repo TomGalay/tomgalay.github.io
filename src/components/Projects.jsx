@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import SheetHeader from "./SheetHeader.jsx";
+import useIsMobile from "../hooks/useIsMobile.js";
 import { PROJECTS } from "../data.js";
 
 const ease = [0.22, 1, 0.36, 1];
@@ -99,20 +100,49 @@ function LinkRow({ links }) {
 }
 
 function ThumbStrip({ p, active, setActive, phone }) {
+  const compact = useIsMobile("(max-width: 880px)");
+  const carousel = compact && p.images.length > 3;
+  const start = carousel ? Math.max(0, Math.min(active - 1, p.images.length - 3)) : 0;
+  const visible = carousel ? p.images.slice(start, start + 3) : p.images;
+  const step = (d) => setActive((active + d + p.images.length) % p.images.length);
+
   return (
-    <div className={`show-thumbs${phone ? " show-thumbs--phone" : ""}`}>
-      {p.images.map((img, j) => (
+    <div className={`show-thumbs${phone ? " show-thumbs--phone" : ""}${carousel ? " show-thumbs--carousel" : ""}`}>
+      {carousel && (
         <button
-          key={img.src}
           type="button"
-          className={`show-thumb${active === j ? " on" : ""}`}
-          aria-label={`View ${p.name} screenshot ${j + 1} of ${p.images.length}`}
-          aria-pressed={active === j}
-          onClick={() => setActive(j)}
+          className="show-thumbs-nav"
+          onClick={() => step(-1)}
+          aria-label={`View ${p.name} previous screenshot`}
         >
-          <img src={img.src} alt="" loading="lazy" />
+          &lt;
         </button>
-      ))}
+      )}
+      {visible.map((img, j) => {
+        const idx = start + j;
+        return (
+          <button
+            key={img.src}
+            type="button"
+            className={`show-thumb${active === idx ? " on" : ""}`}
+            aria-label={`View ${p.name} screenshot ${idx + 1} of ${p.images.length}`}
+            aria-pressed={active === idx}
+            onClick={() => setActive(idx)}
+          >
+            <img src={img.src} alt="" loading="lazy" />
+          </button>
+        );
+      })}
+      {carousel && (
+        <button
+          type="button"
+          className="show-thumbs-nav"
+          onClick={() => step(1)}
+          aria-label={`View ${p.name} next screenshot`}
+        >
+          &gt;
+        </button>
+      )}
     </div>
   );
 }
