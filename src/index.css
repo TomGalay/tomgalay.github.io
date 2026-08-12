@@ -775,19 +775,6 @@ section {
   color: var(--ink-dim);
 }
 
-.np-side {
-  position: absolute;
-  right: -36px;
-  top: 50%;
-  transform: translateY(-50%) rotate(180deg);
-  writing-mode: vertical-rl;
-  white-space: nowrap;
-  font-family: var(--mono);
-  font-size: 9.5px;
-  letter-spacing: 0.24em;
-  color: var(--ink-dim);
-}
-
 .np-dim {
   margin-top: 28px;
   display: flex;
@@ -818,7 +805,6 @@ section {
 
 .np-mark,
 .np-axis,
-.np-side,
 .np-dim {
   opacity: 0;
   animation: plate-in 0.6s ease forwards;
@@ -832,10 +818,6 @@ section {
   animation-delay: 1.4s;
 }
 
-.np-side {
-  animation-delay: 1.6s;
-}
-
 .np-dim {
   animation-delay: 1.85s;
 }
@@ -847,30 +829,6 @@ section {
   to {
     opacity: 1;
   }
-}
-
-.landing-role {
-  margin-top: 22px;
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 10px 14px;
-  font-family: var(--mono);
-  font-size: 11px;
-  letter-spacing: 0.2em;
-  color: var(--cyan);
-}
-
-.landing-role span {
-  color: var(--ink-dim);
-}
-
-.landing-role::after {
-  content: "";
-  flex: 1;
-  min-width: 40px;
-  height: 1px;
-  background: var(--line-strong);
 }
 
 .landing-statement {
@@ -3608,8 +3566,7 @@ a.stamp {
     padding-top: 48px;
   }
 
-  .np-axis,
-  .np-side {
+  .np-axis {
     display: none;
   }
 
@@ -3791,7 +3748,6 @@ a.stamp {
 
   .np-mark,
   .np-axis,
-  .np-side,
   .np-dim {
     animation: none;
     opacity: 1;

@@ -48,18 +48,12 @@ export default function Landing() {
             <span className="np-axis" aria-hidden="true">
               <span className="np-axis-lbl">{PROFILE.nameAxis}</span>
             </span>
-            <span className="np-side" aria-hidden="true">
-              {PROFILE.nameNote}
-            </span>
             <div className="np-dim" aria-hidden="true">
               <span className="np-dim-tag">{PROFILE.nameTag}</span>
               <span className="dim-line" />
               <span className="np-dim-scale">{PROFILE.nameScale}</span>
             </div>
           </div>
-          <motion.p className="landing-role" variants={fade} initial="hidden" animate="show" custom={3}>
-            {PROFILE.role} <span>{PROFILE.disciplines}</span>
-          </motion.p>
           <motion.p className="landing-statement" variants={fade} initial="hidden" animate="show" custom={4}>
             I BUILD THE <em>SYSTEMS</em> THAT RUN THE SHIFT.
           </motion.p>

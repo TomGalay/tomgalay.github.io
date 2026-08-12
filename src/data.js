@@ -11,7 +11,6 @@ export const PROFILE = {
   status: "AVAILABLE FOR WORK",
   nameTag: "ITG-00",
   nameScale: "SCALE 1:1",
-  nameNote: "DRAWN BY ISAIAH T. GALAY",
   nameAxis: "X-AXIS",
 };
 
