@@ -11,32 +11,52 @@ const fade = {
   }),
 };
 
-const nameBlock = {
-  hidden: {},
-  show: { transition: { staggerChildren: 0.1, delayChildren: 0.12 } },
-};
-
-const nameLine = {
-  hidden: { opacity: 0, y: 38 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.75, ease: [0.22, 1, 0.36, 1] } },
-};
-
 export default function Landing() {
   return (
     <header className="landing" id="title">
       <div className="wrap landing-grid">
         <div className="landing-copy">
-          <motion.h1 className="landing-name" variants={nameBlock} initial="hidden" animate="show">
-            {PROFILE.name.map((part, i) => (
-              <motion.span
-                key={part}
-                className={`ln${i === 1 ? " alt" : i === 2 ? " accent" : ""}`}
-                variants={nameLine}
-              >
-                {part}
-              </motion.span>
-            ))}
-          </motion.h1>
+          <div className="name-plate">
+            <h1 className="landing-name">
+              {PROFILE.name.map((word, i) => {
+                const cls = i === 1 ? "draft" : i === 2 ? "accent" : "ink";
+                const base = 0.55 * i;
+                return (
+                  <span key={word} className={`lw lw-${cls}`} style={{ "--lw-delay": `${base}s` }}>
+                    <span className="lw-clip">
+                      {word.split("").map((ch, j) => (
+                        <span
+                          key={`${ch}-${j}`}
+                          className="ltr"
+                          style={{ "--ltr-delay": `${base + 0.72 + j * 0.05}s` }}
+                        >
+                          {ch}
+                        </span>
+                      ))}
+                    </span>
+                    <span className="lw-pen" aria-hidden="true" />
+                    <span className="lw-base" aria-hidden="true" />
+                  </span>
+                );
+              })}
+              <span className="np-mark np-tl" aria-hidden="true" />
+              <span className="np-mark np-tr" aria-hidden="true" />
+              <span className="np-mark np-bl" aria-hidden="true" />
+              <span className="np-mark np-br" aria-hidden="true" />
+            </h1>
+
+            <span className="np-axis" aria-hidden="true">
+              <span className="np-axis-lbl">{PROFILE.nameAxis}</span>
+            </span>
+            <span className="np-side" aria-hidden="true">
+              {PROFILE.nameNote}
+            </span>
+            <div className="np-dim" aria-hidden="true">
+              <span className="np-dim-tag">{PROFILE.nameTag}</span>
+              <span className="dim-line" />
+              <span className="np-dim-scale">{PROFILE.nameScale}</span>
+            </div>
+          </div>
           <motion.p className="landing-role" variants={fade} initial="hidden" animate="show" custom={3}>
             {PROFILE.role} <span>{PROFILE.disciplines}</span>
           </motion.p>

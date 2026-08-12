@@ -27,6 +27,7 @@ Additional semantic colors used sparingly: `#4ade80` (status LEDs, "current" mar
 | Role | Family | Usage |
 | ---- | ------ | ----- |
 | Display | **Anton** | Headlines, sheet titles, layer plates, big numbers. Always uppercase, tight leading (~0.95). |
+| Hero name | **Archivo Black** | The landing name only — wider/heavier lettering, rendered as per-letter SVG text. Traced by a pen (`stroke-dashoffset` draw) on load. |
 | Body | **Archivo** | Paragraphs, summaries, points. |
 | Annotation | **IBM Plex Mono** | Labels, meta, tags, tabs, coordinates — everything that reads like a drafting note. Wide letter-spacing (0.1em–0.2em), small sizes (9.5–12.5px). |
 | Honor | **Cinzel** | Latin-honors plate only (summa cum laude). Classical Roman inscription serif, uppercase, centered, quiet — no glow, no animation. |
@@ -38,6 +39,7 @@ Outlined text (transparent fill + `-webkit-text-stroke`) is a signature move —
 - **Signature easing:** `cubic-bezier(0.22, 1, 0.36, 1)` for reveals and hovers; `cubic-bezier(0.65, 0, 0.35, 1)` for line draws.
 - Reveals use Framer Motion `whileInView` with `viewport={{ once: true }}`, small `y` offsets (24–34px), durations 0.45–0.75s.
 - Living elements: drifting grid, blinking status LED, beacon pulse on the top stack layer, floating callouts, cursor crosshair.
+- Hero name draws itself in: per-letter SVG `stroke-dashoffset` trace (draft-easing line draw), the middle name gets a faint cyan pencil pass first and stays outlined, then ISAIAH/GALAY fill in. Tuned via `useReducedMotion`.
 - Interactive feedback everywhere: hover lifts (`translateY(-3px…-5px)`), underline draws (`scaleX` with origin flip), hard offset shadows on CTAs (`5px 5px 0`), glow on active timeline nodes.
 - **Always** respect `prefers-reduced-motion` (see the block at the end of `index.css`) and hide pointer-only effects behind `@media (pointer: coarse)`.
 

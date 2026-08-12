@@ -33,7 +33,7 @@ Navigation is a sticky **sheet-tab bar** (CAD-style) with scroll-spy, a reading 
 ## Project structure
 
 ```
-├── index.html              # Fonts (Anton / Archivo / IBM Plex Mono) + meta + theme boot script
+├── index.html              # Fonts (Anton / Archivo / Archivo Black / IBM Plex Mono / Cinzel) + meta + theme boot script
 ├── public/                 # Project screenshots + certification logos (referenced from data.js)
 ├── .github/workflows/
 │   └── deploy.yml          # Build + deploy to GitHub Pages on push to main

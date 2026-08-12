@@ -21,7 +21,7 @@ There is no lint, typecheck, or test setup. `npm run build` is the verification 
 - `src/data.js` — **single source of truth for all content** (profile, experience, skill groups, stack layers, education, awards, revisions). Edit content here, never inline in components.
 - `src/index.css` — the entire design system: tokens in `:root`, then component styles. Read `docs/DESIGN.md` before changing visuals.
 - `src/components/` — one component per sheet/element; `src/hooks/useIsMobile.js` for responsive layout switches.
-- `index.html` — Google Fonts (Anton, Archivo, IBM Plex Mono) and meta.
+- `index.html` — Google Fonts (Anton, Archivo, Archivo Black, IBM Plex Mono, Cinzel) and meta.
 
 ## Conventions
 

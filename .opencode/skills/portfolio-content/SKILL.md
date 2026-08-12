@@ -22,7 +22,7 @@ All copy lives in `src/data.js`. Never hardcode résumé content in components.
 ## Design changes — src/index.css + docs/DESIGN.md
 
 - Tokens only: `--paper`, `--paper-deep`, `--ink`, `--ink-dim`, `--line`, `--line-strong`, `--cyan` (interactive), `--amber` (highlight), `--stamp` (seals).
-- Fonts: Anton (display, uppercase, tight leading), Archivo (body), IBM Plex Mono (annotations, wide tracking).
+- Fonts: Anton (display, uppercase, tight leading), Archivo Black (landing name only), Archivo (body), IBM Plex Mono (annotations, wide tracking).
 - Signature easing: `cubic-bezier(0.22, 1, 0.36, 1)`. Reveals: `whileInView`, `once: true`, small y offsets.
 - Square corners, 1px hairlines, dashed secondary separators, outlined display text via `-webkit-text-stroke`.
 - Preserve `prefers-reduced-motion` and `@media (pointer: coarse)` fallbacks. The 3D stack is CSS transforms only — keep it WebGL-free.
