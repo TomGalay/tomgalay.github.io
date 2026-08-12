@@ -714,51 +714,37 @@ section {
   inset: -14px -30px;
   z-index: 0;
   pointer-events: none;
-  background-image:
-    linear-gradient(var(--grid-ghost) 1px, transparent 1px),
-    linear-gradient(90deg, var(--grid-ghost) 1px, transparent 1px),
-    linear-gradient(var(--grid-ghost) 1px, transparent 1px),
-    linear-gradient(90deg, var(--grid-ghost) 1px, transparent 1px),
-    repeating-linear-gradient(8deg, var(--grid-faint) 0 1px, transparent 1px calc(var(--name-fs) * 2));
-  background-size:
-    calc(var(--name-fs) * 2.8) calc(var(--name-fs) * 1.4),
-    calc(var(--name-fs) * 2.8) calc(var(--name-fs) * 1.4),
-    calc(var(--name-fs) * 1.9) calc(var(--name-fs) * 2.2),
-    calc(var(--name-fs) * 1.9) calc(var(--name-fs) * 2.2),
-    auto;
-  background-position:
-    0 0,
-    0 0,
-    calc(var(--name-fs) * 0.55) 0,
-    calc(var(--name-fs) * 0.55) 0,
-    0 0;
-  -webkit-mask-image: radial-gradient(140% 120% at 10% 6%, #000 30%, transparent 78%);
-  mask-image: radial-gradient(140% 120% at 10% 6%, #000 30%, transparent 78%);
+  -webkit-mask-image: radial-gradient(130% 115% at 10% 4%, #000 35%, transparent 80%);
+  mask-image: radial-gradient(130% 115% at 10% 4%, #000 35%, transparent 80%);
   opacity: 0;
   animation: plate-in 0.9s ease forwards;
-  animation-delay: 0.15s;
+  animation-delay: 0.18s;
 }
 
-.name-grid::before {
-  content: "";
+.name-grid-svg {
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 34%;
-  width: 1px;
-  background: var(--cyan-line-soft);
-  opacity: 0.8;
+  inset: 0;
+  width: 100%;
+  height: 100%;
 }
 
-.name-grid::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 61%;
-  height: 1px;
-  background: var(--cyan-line-soft);
-  opacity: 0.6;
+.name-grid-svg path {
+  fill: none;
+  stroke-width: 1;
+  vector-effect: non-scaling-stroke;
+}
+
+.name-grid-svg .ng-line {
+  stroke: var(--line);
+}
+
+.name-grid-svg .ng-open {
+  stroke: var(--grid-ghost);
+}
+
+.name-grid-svg .ng-cyan {
+  stroke: var(--cyan-line-soft);
+  opacity: 0.9;
 }
 
 .name-grid-tick {
