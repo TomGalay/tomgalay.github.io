@@ -11,6 +11,15 @@ export const PROFILE = {
   status: "AVAILABLE FOR WORK",
 };
 
+export const SECTIONS = [
+  { id: "title", no: "00", label: "TITLE" },
+  { id: "experience", no: "01", label: "CAREER" },
+  { id: "projects", no: "02", label: "HIGHLIGHTS" },
+  { id: "skills", no: "03", label: "SKILLS" },
+  { id: "education", no: "04", label: "BACKGROUND" },
+  { id: "contact", no: "05", label: "REACH OUT" },
+];
+
 export const EXPERIENCE = [
   {
     rev: "REV.G",

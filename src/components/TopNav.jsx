@@ -1,38 +1,10 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-
-const SECTIONS = [
-  { id: "title", no: "00", label: "TITLE" },
-  { id: "experience", no: "01", label: "CAREER" },
-  { id: "projects", no: "02", label: "HIGHLIGHTS" },
-  { id: "skills", no: "03", label: "SKILLS" },
-  { id: "education", no: "04", label: "BACKGROUND" },
-  { id: "contact", no: "05", label: "REACH OUT" },
-];
-
-const THEMES = ["light", "dark", "blue"];
-
-function storedTheme() {
-  try {
-    const t = localStorage.getItem("ig-theme");
-    return THEMES.includes(t) ? t : "blue";
-  } catch {
-    return "blue";
-  }
-}
+import { SECTIONS } from "../data.js";
 
 export default function TopNav() {
   const [active, setActive] = useState("title");
   const [progress, setProgress] = useState(0);
-  const [theme, setTheme] = useState(storedTheme);
-
-  const applyTheme = (id) => {
-    setTheme(id);
-    document.documentElement.dataset.theme = id;
-    try {
-      localStorage.setItem("ig-theme", id);
-    } catch {}
-  };
 
   useEffect(() => {
     let frame = null;
@@ -77,19 +49,6 @@ export default function TopNav() {
       </div>
       <div className="tn-status">
         <span className="led" aria-hidden="true" />
-        <div className="tn-theme" role="group" aria-label="Color mode">
-          {THEMES.map((id) => (
-            <button
-              key={id}
-              type="button"
-              className={theme === id ? "active" : ""}
-              aria-pressed={theme === id}
-              onClick={() => applyTheme(id)}
-            >
-              {id.toUpperCase()}
-            </button>
-          ))}
-        </div>
       </div>
       <motion.div
         className="tn-progress"
