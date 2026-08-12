@@ -17,6 +17,11 @@ export default function Landing() {
       <div className="wrap landing-grid">
         <div className="landing-copy">
           <div className="name-plate">
+            <span className="name-grid" aria-hidden="true">
+              <span className="name-grid-tick" style={{ top: "12%", left: "18%" }} />
+              <span className="name-grid-tick" style={{ top: "74%", left: "86%" }} />
+              <span className="name-grid-tick" style={{ top: "46%", left: "52%" }} />
+            </span>
             <h1 className="landing-name">
               {PROFILE.name.map((word, i) => {
                 const cls = i === 1 ? "draft" : i === 2 ? "accent" : "ink";
@@ -39,20 +44,7 @@ export default function Landing() {
                   </span>
                 );
               })}
-              <span className="np-mark np-tl" aria-hidden="true" />
-              <span className="np-mark np-tr" aria-hidden="true" />
-              <span className="np-mark np-bl" aria-hidden="true" />
-              <span className="np-mark np-br" aria-hidden="true" />
             </h1>
-
-            <span className="np-axis" aria-hidden="true">
-              <span className="np-axis-lbl">{PROFILE.nameAxis}</span>
-            </span>
-            <div className="np-dim" aria-hidden="true">
-              <span className="np-dim-tag">{PROFILE.nameTag}</span>
-              <span className="dim-line" />
-              <span className="np-dim-scale">{PROFILE.nameScale}</span>
-            </div>
           </div>
           <motion.p className="landing-statement" variants={fade} initial="hidden" animate="show" custom={4}>
             I BUILD THE <em>SYSTEMS</em> THAT RUN THE SHIFT.

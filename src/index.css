@@ -580,6 +580,7 @@ section {
 
 .landing-name {
   position: relative;
+  z-index: 1;
   display: inline-block;
   max-width: 100%;
 }
@@ -708,118 +709,83 @@ section {
   }
 }
 
-.np-mark {
+.name-grid {
   position: absolute;
-  width: 13px;
-  height: 13px;
+  inset: -14px -30px;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(var(--grid-ghost) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-ghost) 1px, transparent 1px),
+    linear-gradient(var(--grid-ghost) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-ghost) 1px, transparent 1px),
+    repeating-linear-gradient(8deg, var(--grid-faint) 0 1px, transparent 1px calc(var(--name-fs) * 2));
+  background-size:
+    calc(var(--name-fs) * 2.8) calc(var(--name-fs) * 1.4),
+    calc(var(--name-fs) * 2.8) calc(var(--name-fs) * 1.4),
+    calc(var(--name-fs) * 1.9) calc(var(--name-fs) * 2.2),
+    calc(var(--name-fs) * 1.9) calc(var(--name-fs) * 2.2),
+    auto;
+  background-position:
+    0 0,
+    0 0,
+    calc(var(--name-fs) * 0.55) 0,
+    calc(var(--name-fs) * 0.55) 0,
+    0 0;
+  -webkit-mask-image: radial-gradient(140% 120% at 10% 6%, #000 30%, transparent 78%);
+  mask-image: radial-gradient(140% 120% at 10% 6%, #000 30%, transparent 78%);
+  opacity: 0;
+  animation: plate-in 0.9s ease forwards;
+  animation-delay: 0.15s;
 }
 
-.np-mark::before,
-.np-mark::after {
+.name-grid::before {
   content: "";
   position: absolute;
-  background: var(--cyan-line-strong);
+  top: 0;
+  bottom: 0;
+  left: 34%;
+  width: 1px;
+  background: var(--cyan-line-soft);
+  opacity: 0.8;
 }
 
-.np-mark::before {
+.name-grid::after {
+  content: "";
+  position: absolute;
   left: 0;
   right: 0;
-  top: 6px;
+  top: 61%;
+  height: 1px;
+  background: var(--cyan-line-soft);
+  opacity: 0.6;
+}
+
+.name-grid-tick {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+}
+
+.name-grid-tick::before,
+.name-grid-tick::after {
+  content: "";
+  position: absolute;
+  background: var(--cyan-line-soft);
+}
+
+.name-grid-tick::before {
+  left: 0;
+  right: 0;
+  top: 5.5px;
   height: 1px;
 }
 
-.np-mark::after {
+.name-grid-tick::after {
   top: 0;
   bottom: 0;
-  left: 6px;
+  left: 5.5px;
   width: 1px;
-}
-
-.np-tl {
-  top: -9px;
-  left: -11px;
-}
-
-.np-tr {
-  top: -9px;
-  right: -11px;
-}
-
-.np-bl {
-  bottom: -9px;
-  left: -11px;
-}
-
-.np-br {
-  bottom: -9px;
-  right: -11px;
-}
-
-.np-axis {
-  position: absolute;
-  top: -9px;
-  bottom: -11px;
-  left: -32px;
-  border-left: 1px dashed var(--cyan-line-soft);
-}
-
-.np-axis-lbl {
-  position: absolute;
-  left: 7px;
-  bottom: 6px;
-  writing-mode: vertical-rl;
-  transform: rotate(180deg);
-  font-family: var(--mono);
-  font-size: 9.5px;
-  letter-spacing: 0.24em;
-  color: var(--ink-dim);
-}
-
-.np-dim {
-  margin-top: 28px;
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  font-family: var(--mono);
-  font-size: 10px;
-  letter-spacing: 0.18em;
-  color: var(--ink-dim);
-}
-
-.np-dim .dim-line {
-  flex: 1;
-}
-
-.np-dim-tag,
-.np-dim-scale {
-  white-space: nowrap;
-}
-
-.np-dim-tag {
-  color: var(--amber);
-}
-
-.np-dim-scale {
-  color: var(--cyan);
-}
-
-.np-mark,
-.np-axis,
-.np-dim {
-  opacity: 0;
-  animation: plate-in 0.6s ease forwards;
-}
-
-.np-mark {
-  animation-delay: 0.1s;
-}
-
-.np-axis {
-  animation-delay: 1.4s;
-}
-
-.np-dim {
-  animation-delay: 1.85s;
 }
 
 @keyframes plate-in {
@@ -3566,13 +3532,8 @@ a.stamp {
     padding-top: 48px;
   }
 
-  .np-axis {
-    display: none;
-  }
-
-  .np-tr,
-  .np-br {
-    right: -6px;
+  .name-grid {
+    inset: -10px -16px;
   }
 
   .stack-stage {
@@ -3746,9 +3707,7 @@ a.stamp {
     color: var(--amber);
   }
 
-  .np-mark,
-  .np-axis,
-  .np-dim {
+  .name-grid {
     animation: none;
     opacity: 1;
   }

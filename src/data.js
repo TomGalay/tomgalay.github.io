@@ -9,9 +9,6 @@ export const PROFILE = {
   docNo: "ITG-RÉSUMÉ-0726",
   rev: "PORTFOLIO",
   status: "AVAILABLE FOR WORK",
-  nameTag: "ITG-00",
-  nameScale: "SCALE 1:1",
-  nameAxis: "X-AXIS",
 };
 
 export const SECTIONS = [
